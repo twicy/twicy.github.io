@@ -3,4 +3,4 @@
 
 ```c
 static void hello();
-``
+```
