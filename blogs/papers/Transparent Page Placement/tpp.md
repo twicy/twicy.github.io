@@ -25,9 +25,11 @@ The author characterizes 4 popular applications in Meta's fleet.
 ## Design
 
 ### Chameleon
-In a word, the chameleon utilizes the PEBS mechanism of a CPU's PMU to collect the temperature of pages that triggers specific events.
+```text
+chameleon, a user space tool, utilizes the PEBS mechanism of a CPU's PMU to collect the temperature of pages that triggers specific events.
+```
 - Collector
-Collect virtual address and PID of pages that triggers: MEM_LOAD_RETIRED.L3_MISS and MEM_INST_RETIRED.ALL_STORES.
+Collect virtual address and PID of pages that triggers: `MEM_LOAD_RETIRED.L3_MISS` and `MEM_INST_RETIRED.ALL_STORES`.
 
 To leverage accuracy and overhead, one sample for every 200 events is a good tradeoff.[sample_period = 200]
 
@@ -43,6 +45,12 @@ Track the temperature of all the pages reported by the collector with a 64-bit b
 - Cold page re-access time varies for workloads. Page placement on a tiered memory system should be aware of this to avoid high memory access latency.
 
 ### Problems with Linux Page Placement Policy
+```text
+Problems of vanilla Linux
+1. homogenous DRAM-only NUMA nodes
+2. tightly coupled memory allocation and reclamation
+3. NUMA Balancing may trap hot pages in slower memory tier, because it halts premotion if destination memory node dissatisfy high watermark
+```
 - Original Linux is designed for homogenous DRAM-only NUMA nodes.
 - Page allocation and reclamation are tightly coupled
 
@@ -54,9 +62,70 @@ Only after enough memory has been freed to satisfy local memory node’s high_wa
 
 Due to the fact that relcamation is slower that allocation, local memory halts frequently and degrade application performance.
 
+- NUMA Balancing
+An existing Kernel feature that moves pages to a memory node closer to the CPU.
 
+Routinely samples a subset of CPU's allocated memory on each memory node and clear present bit on their flags.
 
+NUMA hint fault, rather than page fault is triggered when accessing a sampled page.
 
+Promotion is the action of migrating a sample page to the local memory node of the latest CPU that tried to access it.
 
+NUMA Balancing makes the assumption that all memory nodes are attached to CPUs.
 
+Also NUMA Balancing checks whether the high watermark is satisfied for the destination memory node before premotion, if not, the migration process halts.
 
+### TPP design
+```text
+1) lightweight demotion to CXL-Memory:
+migrate to CXL node, which is still in memory; instead of swapping out
+
+2) decoupling allocation and reclamation path:
+reclaim earlier than allocate, asynchronously
+
+3) hot-page promotion to local nodes:
+a) solve ping-pong issue[wrongly premote pseudo hot pages]
+b) identify trapped hot pages[active LRU members and revisited inactive LRU members]
+
+4) prefer anon pages to local node while preferring cache pages to CXL node
+```
+- Migration for Lightweight Reclamation
+When local memory node fills up,
+
+Original Linux: pages-out to swap device
+
+TPP: put to a separate demotion list and try to migrate to CXL-node asychronously
+
+Both use LRU algorithm to select victim
+
+TPP: demoted pages still in memory; look for both inactive file and anon pages
+
+If TPP migration fails during demotion, fall back to default reclamation(pages out to the swap device)
+
+Given multiple CXL-nodes, demotion target chosen based on the node distances from the CPU
+
+- Decoupling Allocation and Reclamation
+
+background reclamation until demotion_watermark, allocation satisfies allocation_watermark
+
+demotion watermark higher than allocation watermark, because reclamation is always quicker than allocation
+
+control aggressiveness with /proc/sys/vm/demote_scale_factor, default value 2%, means eclamation starts as soon as only a 2% of the local node’s capacity is available to consume.
+
+- Page Promotion from Remote Nodes
+
+Keep NUMA Balancing only sample CXL-nodes. Promote hot pages in CXL node regardless of destination local node's water mark[allocation]
+
+NUMA Balancing may migrate pseudo hot pages, causing demotion-premotion ping pong
+
+TPP will check the page's position in the LRU list; only active LRU members are considered promotion candidate;
+
+If a CXL-node is not under pressure, hot pages can be trapped in inactive LRU.
+
+TPP address this issues by instantly mark NUMA-hint fault pages as accessed and move them to active LRU immediately. They will be promoted if the are still hot at the next NUMA hint fault.
+
+- Page Type-Aware Allocation
+
+Unnecessary page migrations: cold file caches are demoted to CXL-nodes; local memory node is occupied file caches forces anon pages be allocated on CXL-nodes and later be premoted back.
+
+TPP: allocate caches(file cache, tmpfs) to CXL node preferrably, if a cache is hot to be premoted, it will eventually
