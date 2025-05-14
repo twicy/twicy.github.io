@@ -4,7 +4,6 @@ permalink: /projects/index.html
 title: Projects
 ---
 
-<<<<<<< HEAD
 ### CXL-based VM Live Migration -- (2025.04 - 2025.6)
 
 Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.edu/~ezk/), [Dr. Tyler Estro](https://www.fsl.cs.stonybrook.edu/~tyler/), [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/)
@@ -28,9 +27,6 @@ Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stony
 ### OpenUCX Optimization --  (2023.10 - 2024.05)
 
 Huawei Technologies Co., Ltd, Advisor: [Dr. Yunfei Du](https://scholar.google.com/citations?user=6vf_uwYAAAAJ&hl=en&oi=ao), [Dr. Yuxin Ren](https://orcid.org/0000-0003-2678-9225)
-=======
-### OpenUCX Optimization
->>>>>>> parent of bb28644... 2025/02/13 update
 
 - [OpenUCX](https://openucx.org/) is an open-source, production-grade communication framework for data-centric and high-performance applications.
 - It is based on a set of abstract communication primitives, inclusing RDMA. However, current implementation of openucx is not enough, as it fails to mitigate the widely known scalability issue of RDMA network.
