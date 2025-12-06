@@ -4,45 +4,78 @@ permalink: /projects/index.html
 title: Projects
 ---
 
-### CXL-based VM Live Migration -- (2025.04 - 2025.6)
+### SGEMM + Two Minimum Value and Index Searching -- (2025.09 - 2025.12)
 
-Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.edu/~ezk/), [Dr. Tyler Estro](https://www.fsl.cs.stonybrook.edu/~tyler/), [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/)
+Stony Brook University, Coursework of [ESE 565: Parallel Processing Architectures](http://www.ece.sunysb.edu/~midor/ESE565/index.html) Fall 2025, Advisor: [Prof. Mikhail Dorojevets](https://www.ece.stonybrook.edu/~midor/)
 
-- Traditionally VM live migration leverages TCP/IP or RDMA as the its underlying data transmission channel, how about CXL?
-- CXL provides ld-st semantic and ultra-low access latency compared with the afore-mentioned technologies, which sparks our research towards that dimension
-- We implemented a working data transfer channel prototype based on CXL dax device. Currently we are still evaluating and working on more in-depth aspect of the project
+- **Requirement**: Perform a matrix multiplication of two randomly generated floating-point square (I generalized it to **any arbitrary size**) matrices, then find the **the two minimum values and their indices** in the product matrix, with sequential C/C++, ISPC (with multi-task), Pthread (with ISPC), OpenMP (with ISPC), 1/2 GPU CUDA, 4 GPU CUDA with MPI
+  - **Challenge 1**: **Maximize parallelization** of minimum searching in each subroutine (ISPC instance/Pthread/OpenMP thread/CUDA thread block), instead of reducing it sequentially in the main route.
+  - **Challenge 2**: Atomic update of both minimum **value and index**
+- I took cache (locality and false sharing), SIMD/thread/task/SIMT parallelism into consideration achieving the following result, compared with naive Sequential C:
+  - ISPC with multi-task: **199×**
+  - Pthread/OpenMP with ISPC: **259×**
+  - 2-GPU CUDA: **16388×**
+  - 4-GPU CUDA MPI: **667×**
+- Specifically, my CUDA program achieved $80\% - 85\%$ of cuBLAS's performance on matrices of order 2k, 4k, 8k
+  - Hierarchy: Device level, Thread Block level, Warp level, Thread level
+  - Vectorized load, Bank conflict, Coalesced memory access
+  - Double buffering
+  - Works on **arbitrary sizes**
+- Archived as an example of an outstanding ESE 565 project
 
-### Ethernet Network Driver Development for AMD AXI FPGA -- (2024.10 - 2025.3)
+  ![The memory and thread hierarchies in the CUDA programming model.](/images/projects/gpu_arch.png)
+  Image source: [Strassen's Algorithm Reloaded on GPUs](https://dl.acm.org/doi/10.1145/3372419)
+
+### CXL-based VM Live Migration -- (2025.04 - 2025.06)
+
+Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.edu/~ezk/), [Dr. Tyler Estro](https://www.fsl.cs.stonybrook.edu/~tyler/), [Mr. Daniel Berger](https://www.microsoft.com/en-us/research/people/daberg/), [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/), [Prof. Geoff Kuenning](https://scholar.google.com/citations?user=wVjW_1MAAAAJ&hl=en)
+
+- **Background**: VM live migration is a widely utilized technique in data centers for system upgrade, load balancing, etc. Existing VM live migration leverages TCP/IP or RDMA as its underlying data transmission channel, **inevitably having a data copy at the `dst` side**, which is widely deemed as a price that must be paid.
+- However, this axiom-like assumption is now **overturned** by hardware memory pooling, provided by commodity-ready [Compute Express Link (CXL)](https://computeexpresslink.org/) 2.0.
+- [Mohit](https://www.linkedin.com/in/mohit-kumar-verma-a94962150/) and I implemented a working proof-of-concept prototype on emulated CXL hardware, achieving a **2×** faster migration speed over traditional TCP-based methods in internal benchmarks
+- We both helped implement QEMU-level CXL tiering solution
+  - Only hot pages are transferred
+  - Cold pages are remapped rather than migrated
+  - **Zero-copy** by definition
+
+  ![CXL2.0 Memory Pooling](/images/projects/cxl2.0_memory_pool.png)
+  Image source: [Compute Express Link™ 2.0 Specification: Memory Pooling](https://computeexpresslink.org/wp-content/uploads/2023/12/CXL-2.0-Memory-Pooling.pdf)
+
+### Ethernet Network Driver Development for AMD AXI FPGA -- (2024.10 - 2025.03)
 
 Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/)
 
-- Implemented both packet transmission and reception logic from scratch, with multiple features
-  - 900+ lines of kernel code
-  - Support multi-fragment packet transmission, zero copy and NAPI-based polling
-- Manipulated two ring buffers of hardware descriptors to ensure safe and complete DMA operations
-- Was the [first student in the past 5 years](https://www.linkedin.com/posts/yuchen-tang-b49a37190_thrilled-to-share-that-our-joint-work-on-activity-7320867195838701570-IxKV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0A4KkB_ikcsCKVg_BEXlplJZeRxyaKkiU) to actually deliver a steady and high-performance driver, which has become part of the infrastructure of the lab
-  - 50\% performance increase compared with last generation under iperf3 test suite
-  - The source code is now more human-readable and maintainable, reducing lines of code from over 4,100 to around 1,200 while adhering to the standard Linux Kernel coding style.
+- [Mohit](https://www.linkedin.com/in/mohit-kumar-verma-a94962150/) and I implemented both TX and RX logic from scratch, 900+ lines of clean, well-documented kernel code, supporting multiple features
+  - Multi-fragment TX transmission
+  - In-place RX reception
+  - NAPI-based polling
+- Manipulated two ring buffers of hardware descriptors and registers to ensure safe DMA operations, properly handling erroneous situations and fringe cases
+- Achievements:
+  - $50\%$ performance increase compared with last generation under iperf3 test suite
+  - We are the [first students in the past 5 years](https://www.linkedin.com/posts/yuchen-tang-b49a37190_thrilled-to-share-that-our-joint-work-on-activity-7320867195838701570-IxKV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0A4KkB_ikcsCKVg_BEXlplJZeRxyaKkiU) to actually deliver a steady and high-performance driver
+  - It has been running smoothly and bug-free for **over six months**, reliably serving as core infrastructure for the [COMPAS lab](https://compas.cs.stonybrook.edu/) — something its predecessor had **NEVER** achieved.
 
-### OpenUCX Optimization --  (2023.10 - 2024.05)
+  ![Instructor comment](/images/projects/nic_instructor_comment.jpeg)
 
-Huawei Technologies Co., Ltd, Advisor: [Dr. Yunfei Du](https://scholar.google.com/citations?user=6vf_uwYAAAAJ&hl=en&oi=ao), [Dr. Yuxin Ren](https://orcid.org/0000-0003-2678-9225)
+### RDMA communication middleware (OpenUCX) optimization --  (2023.10 - 2024.05)
+
+Huawei Technologies Co., Ltd, Advisor: [Dr. Yunfei Du](https://scholar.google.com/citations?user=6vf_uwYAAAAJ&hl=en&oi=ao), Tuo Fang, [Dr. Yuxin Ren](https://orcid.org/0000-0003-2678-9225), [Prof. Guyue (Grace) Liu](https://scholar.google.com/citations?user=9NPX8KMAAAAJ)
 
 - [OpenUCX](https://openucx.org/) is an open-source, production-grade communication framework for data-centric and high-performance applications.
-- It is based on a set of abstract communication primitives, inclusing RDMA. However, current implementation of openucx is not enough, as it fails to mitigate the widely known scalability issue of RDMA network.
-- We have come up with several optimizations, with more service type choices and better communcation establishment methods and more.
-![](/images/projects/openucx_layout.jpg)
+- Helped implement **XRC service type**, efficiently bringing down QP numbers thus increasing RDMA scalability
+- Helped resolve the **Head-of-Line blocking** problem with a simple yet effective two-level message slicing policy
+- Helped set up a finer **credit-based flow control** mechanism
+- Evaluated our implementation based on both micro-benchmarks and real-world applications
+- Our work has been recognized and the paper has been accepted to **EuroSys'26**
 
-### Memory node expansion utilizing FPGA-based CXL 1.1 devices
+  ![OpenUcx Layout](/images/projects/openucx_layout.jpg)
 
-- In short, [Compute Express Link](https://www.computeexpresslink.org/) is a processor-to-peripheral Cache-Coherent Interconnect. It is based on PCIe, but can do so much more. [This repo](https://github.com/twicy/awesome-CXL) collects basics, tutorial and news about CXL, I will try my best to update this regularly.
-- Huawei happens to be a member of the CXL consortium, and I am lucky to be a part of the gigantic software-hardware codesign project of single node memory expansion using CXL 1.1 devices.
-![](/images/projects/cxl.png)
+### Memory node expansion utilizing FPGA-based CXL 1.1 devices --  (2023.04 - 2024.12)
 
-### PEBS sampling V.S. Access bit checking
+- **Background**: To meet the need for more memory from HPC and database applications, our lab researched into tiered memory systems, where ideally we exploit a fast DRAM tier for performance and a slow SSD/NVM tier for capacity.
+- However such systems need tuning and clever data placement strategies to avoid severe application performance penalty. [etmem](https://github.com/openeuler-mirror/etmem), is Huawei's tiered memory system manager. It takes a traditional approach of **access bit checking and watermark comparison** to determine the temperature of a page.
+- [Compute Express Link (CXL)](https://computeexpresslink.org/) is a new CPU to peripheral interconnect. With its **CXL.mem** subprotocol, CPUs are able to access CXL memory as cacheable system memory. With access latency **comparable to that of a remote NUMA node** (~100ns for 64B read), it has been one of the most promising emerging memory extent spotted these years.
+- I observed the frequent **page ping-pong** caused by original, **coarse-grained access bit checking** method, and developed a substitute kernel module that multiplexed the original etmem workflow, selectively listening to either access bit checking or fine-grained hardware access counter results.
 
-- [etmem](https://github.com/openeuler-mirror/etmem), is Huawei's tiered memory system manager. It takes a traditional approach of access bit checking to determine the temperature of a page, the same spirit of [Nimble](https://dl.acm.org/doi/10.1145/3297858.3304024).
-- But as many other researchers have pointed out, page table walking is time consuming and coarse-gained, while a CPU hardware event sampling method called PEBS sampling may be the cure. [HEMEM](https://dl.acm.org/doi/10.1145/3477132.3483550), [MEMTIS](https://dl.acm.org/doi/10.1145/3600006.3613167#:~:text=We%20present%20Memtis%2C%20a%20tiered,to%20the%20fast%20tier%20capacity), all adopt this method.
-- However, is PEBS sampling really that powerful? Does it perform well under real world applications? Can PEBS sampling totally outperform page table scanning? My experience tells a slightly different story.
-![](/images/projects/memory_tier.png)
-image source: [TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory](https://arxiv.org/abs/2206.02878)
+  ![Memory Hierarchy](/images/projects/memory_tier.png)
+  Image source: [TPP: Transparent Page Placement for CXL-Enabled Tiered-Memory](https://arxiv.org/abs/2206.02878)

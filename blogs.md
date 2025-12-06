@@ -1,11 +1,11 @@
 ---
 layout: page
 permalink: /blogs/index.html
-title: blogs
+title: Blogs
 ---
 
-This page is still under constructions
+This page is still under construction
 
-## 2023
+## 2025
 
-paper reading and stuff to be added here
+Plan to talk about how I learn CUDA ...

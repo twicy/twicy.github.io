@@ -14,7 +14,7 @@ owner:
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   #twitter: lancecai2002
   github: twicy
-  #linkedin: hanlincai
+  linkedin: yuchen-tang-b49a37190
   #scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
   #bilibili: 594030035
   #researchgate: https://www.researchgate.net/profile/Hanlin-Cai
@@ -28,7 +28,7 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 # https://search.google.com/search-console/ownership
-#google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
+google_verify: "bXA3lQw9buDJZH2NwblukCeAtGopATq9dzbDNkMHwVs"
 
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 # bing_verify: ""
@@ -40,10 +40,12 @@ links:
     url: /
   - title: Projects
     url: /projects/
-  - title: Blogs
-    url: /blogs/
-#  - title: Publications
-#    url: /publications/
+  # - title: Blogs
+  #   url: /blogs/
+  - title: Publications
+    url: /publications/
+  - title: Services
+    url: /services/
 #  - title: Awards
 #    url: /awards/
 #  - title: Teams
