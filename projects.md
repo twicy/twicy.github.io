@@ -16,7 +16,7 @@ Stony Brook University, Coursework of [ESE 565: Parallel Processing Architecture
   - Pthread/OpenMP with ISPC: **259×**
   - 2-GPU CUDA: **16388×**
   - 4-GPU CUDA MPI: **667×**
-- Specifically, my CUDA program achieved $80\% - 85\%$ of cuBLAS's performance on matrices of order 2k, 4k, 8k
+- Specifically, my CUDA program achieved **80% - 85% of cuBLAS's performance** on matrices of order 2k, 4k, 8k
   - Hierarchy: Device level, Thread Block level, Warp level, Thread level
   - Vectorized load, Bank conflict, Coalesced memory access
   - Double buffering
@@ -51,7 +51,7 @@ Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stony
   - NAPI-based polling
 - Manipulated two ring buffers of hardware descriptors and registers to ensure safe DMA operations, properly handling erroneous situations and fringe cases
 - Achievements:
-  - $50\%$ performance increase compared with last generation under iperf3 test suite
+  - 50% performance increase compared with last generation under iperf3 test suite
   - We are the [first students in the past 5 years](https://www.linkedin.com/posts/yuchen-tang-b49a37190_thrilled-to-share-that-our-joint-work-on-activity-7320867195838701570-IxKV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0A4KkB_ikcsCKVg_BEXlplJZeRxyaKkiU) to actually deliver a steady and high-performance driver
   - It has been running smoothly and bug-free for **over six months**, reliably serving as core infrastructure for the [COMPAS lab](https://compas.cs.stonybrook.edu/) — something its predecessor had **NEVER** achieved.
 
