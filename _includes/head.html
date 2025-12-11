@@ -56,6 +56,21 @@
 <!-- Load Modernizr -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous"></script>
 
+<!-- MathJax v3 -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)'], ['$', '$']],
+    displayMath: [['$$','$$'], ['\\[','\\]']]
+  },
+  options: {
+    // skip processing math inside elements with class "no-math"
+    ignoreHtmlClass: 'no-math'
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
 <!-- 16x16 -->
 <!--link rel="shortcut icon" href="{{ site.url }}/images/fav.ico"-->
 <!-- 32x32 -->

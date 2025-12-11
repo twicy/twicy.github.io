@@ -1,11 +1,13 @@
 ---
-layout: page
+layout: default
 permalink: /blogs/index.html
 title: Blogs
 ---
 
 This page is still under construction
 
-## 2025
+## Operating System
 
-Plan to talk about how I learn CUDA ...
+## GPU and CUDA
+
+- \[2025.12\] [SGEMM CUDA kernel](./gpu/sgemm.html)
