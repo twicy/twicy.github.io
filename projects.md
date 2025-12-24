@@ -45,13 +45,15 @@ Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.e
 
 Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/)
 
-- [Mohit](https://www.linkedin.com/in/mohit-kumar-verma-a94962150/) and I implemented both TX and RX logic from scratch, 900+ lines of clean, well-documented kernel code, supporting multiple features
+- Implemented full TX/RX paths from scratch (900+ lines of clean, well-documented Linux kernel code), supporting:
   - Multi-fragment TX transmission
   - In-place RX reception
   - NAPI-based polling
-- Manipulated two ring buffers of hardware descriptors and registers to ensure safe DMA operations, properly handling erroneous situations and fringe cases
+- Explored bonded network interfaces to improve throughput and scalability, including:
+  - Link aggregation with round-robin and balance-xor modes
+  - IRQ CPU affinity tuning via smp_affinity for improved parallelism
 - Achievements:
-  - 50% performance increase compared with last generation under iperf3 test suite
+  - Achieved 50% throughput improvement over the previous generation under the iperf3 benchmark
   - We are the [first students in the past 5 years](https://www.linkedin.com/posts/yuchen-tang-b49a37190_thrilled-to-share-that-our-joint-work-on-activity-7320867195838701570-IxKV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0A4KkB_ikcsCKVg_BEXlplJZeRxyaKkiU) to actually deliver a steady and high-performance driver
   - It has been running smoothly and bug-free for **over six months**, reliably serving as core infrastructure for the [COMPAS lab](https://compas.cs.stonybrook.edu/) — something its predecessor had **NEVER** achieved.
 

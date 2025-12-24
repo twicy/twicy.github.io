@@ -15,7 +15,7 @@ title: Services
 
 ## Volunteer
 
-- Volunteer Teaching at Sanhe, Yunnan, China
+- [Volunteer Teaching](/blogs/volunteering.html) at Sanhe, Yunnan, China
   - 2017.12-2018.01
   - Teach English, Mathematics, Hold seminars on "Chinese Dialects"
   - Truly unforgettable experience, one of the students made it to Yunnan University, Medical School, impressive and moving!
