@@ -4,14 +4,14 @@ permalink: /blogs/index.html
 title: Blogs
 ---
 
-This page is still under construction
+## Operating System and Kernel Bypassing
 
-## Operating System
+- \[2026.1\] [RoCEv2](/blogs/os/rocev2.html)
 
 ## GPU and CUDA
 
-- \[2025.12\] [SGEMM CUDA kernel](./gpu/sgemm.html)
+- \[2025.12\] [SGEMM CUDA kernel](/blogs/gpu/sgemm.html)
 
 ## Other
 
-- \[2025.12\] [Volunteering Teaching](./volunteering.html)
+- \[2025.12\] [Volunteering Teaching](/blogs/volunteering.html)
