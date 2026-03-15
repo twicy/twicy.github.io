@@ -1,19 +1,20 @@
 ---
 layout: page
-permalink: /blogs/gpu/sgemm.html
+permalink: /blogs/gpu/sgemm_p1.html
 title: SGEMM CUDA kernel
 ---
 
-# SGEMM CUDA kernel
+# SGEMM CUDA kernel (First Half)
 
 As a part of my school project, I need to write an SGEMM CUDA kernel.
 
 - `S`: Single precision, `float` is used
 - `GEMM`: $C = \alpha AB + \beta C$
 
-> Without the loss of generality, we discuss the special case of $\alpha = 1, \beta = 0$
+> Without loss of generality, we discuss the special case of $\alpha = 1, \beta = 0$
 
-Here I will discuss matrix multiplication of dimensions `M`, `N`, `K`, with `K` being the inner dimension.
+Here we consider matrix multiplication with dimensions `M`, `N`, and `K`,
+where `K` is the inner dimension.
 
 > In the following blog, I will denote the matrices with `A` (`M × K`), `B` (`K × N`) and their product `C` (`M × N`)
 
@@ -32,15 +33,13 @@ All source code can be found [here](https://github.com/twicy/CUDA).
 - [Part 5: Reduced bank conflict (v3)](#part-5-reduced-bank-conflict-v3)
 - [Part 6: Vectorized load (v4)](#part-6-vectorized-load-v4)
 - [Part 7: Occupancy Analysis](#part-7-occupancy-analysis)
-- [Part 8: Double Buffering (v5)](#part-8-double-buffering-v5)
-- [Part 9: Warp Tile (v6)](#part-9-warp-tile-v6)
 
 ## Test Environment Setup
 
-I am running my kernels on `AD102GL [RTX 6000 Ada Generation]`, `CUDA ver12.2`, on the school server. Important spec listed as following:
+I am running my kernels on `AD102GL [RTX 6000 Ada Generation]`, `CUDA ver12.2`, on the school server. Important specs are listed below:
 
 |Entry|Value|
-|-|-|
+|------|------|
 |Memory bandwidth|960 GB/s|
 |Single-precision performance|91.1 TFLOPS|
 |Shared Memory per Block|48.00 KB|
@@ -55,7 +54,7 @@ I am running my kernels on `AD102GL [RTX 6000 Ada Generation]`, `CUDA ver12.2`, 
 ## Part 1: CPU version
 
 ```cpp
-#define OFFSET(row,col,nrows,ncols) ((row) * (ncols) + (cols))
+#define OFFSET(row,col,nrows,ncols) ((row) * (ncols) + (col))
 void GTruthMatmul(const float *A,
                 const float *B,
                 float *C,
@@ -64,7 +63,7 @@ void GTruthMatmul(const float *A,
         for (int n = 0; n < N; n++) {
             float sum = 0.0f;
             for (int k = 0; k < K; k++) {
-                sum += A[m][k] + B[k][n];
+                sum += A[m][k] * B[k][n];
             }
             C[OFFSET(m, n, M, N)] = sum;
         }
@@ -72,7 +71,7 @@ void GTruthMatmul(const float *A,
 }
 ```
 
-I view the three nested loops in this way. **For each element** in the product `C`, which is of shape (`M × N`), perform dot product of **one row vector of `A`** and **one col vector of `B`**. From my own experience, thinking from the perspective of each element in the product matrix is very helpful.
+I interpret the three nested loops as follows. **For each element** in the product `C`, which is of shape (`M × N`), perform dot product of **one row vector of `A`** and **one col vector of `B`**. From my own experience, thinking from the perspective of each element in the product matrix is very helpful.
 
 > In my definition, `OFFSET` still takes `nrows` as an input variable even though `nrows` is never used. I define it that way because it saves me (as a beginner) the effort of figuring out whether to put `M`/`N`/`K`, instead simply just put `M, K`/`K, N` there.
 
@@ -125,9 +124,9 @@ The arithmetic intensity (AI) of the approach is thus:
 
 $$\frac{2MNK}{MN(2K + 1) \times 4} \approx 0.25$$
 
-Thinking about arithmetic intensity is crucial in deciding whether its memory-bound or compute-bound. Let's check the roofline model:
+Thinking about arithmetic intensity is crucial in deciding whether it's memory-bound or compute-bound. Let's check the roofline model:
 
-> Roofline model simply states that $$\text{Attainable Performance} = \max(\text{Peak Performance}, \text{AI} \times \text{Peak Bandwidth})$$
+> Roofline model simply states that $$\text{Attainable Performance} = \min(\text{Peak Performance}, \text{AI} \times \text{Peak Bandwidth})$$
 
 > With **AI (FLOPs/Byte)** being the x-axis, **Attaninable Performance(FLOPs/s)** being the y-axis, the graph is first linear then flat, meaning performance first scales with AI, until capped by peak performance. Checkout [this blog](https://dando18.github.io/posts/2020/04/02/roofline-model) which provides a dynamic plot
 
@@ -195,10 +194,10 @@ FMA instructions are important when we think about **how many FMA instructions w
 Alternatively, one could also use outer product to do matrix multiplication:
 
 ```cpp
-for (int k = 0; j < K; k++) {
+for (int k = 0; k < K; k++) {
     for (int m = 0; m < M; m++) {
         for (int n = 0; n < N; n++) {
-            C[OFFSET(m, n, M, N)] += A[m][k] * B[k][n];
+            C[m][n] += A[m][k] * B[k][n];
         }
     }
 }
@@ -208,7 +207,7 @@ I view it as, along the inner dimension `K`, take one column `col(M, 1)` in `A` 
 
 - Both methods have the same amount of computations (FLOPs), which is $2MNK$ (or $MNK$ FMAs), but they have quite different memory access patterns.
 
-> Not considering (Even considering) shared memory, doing inner product requires each A row and B col to be loaded multiple times, while doing outer product requires each A col and B row to be loaded only once.
+> Not considering (Even considering) shared memory, inner products require each row of A and column of B to be loaded multiple times, while doing outer product requires each A col and B row to be loaded only once.
 
 - Namely for the same amount of memory loaded, they have different AI
 
@@ -321,7 +320,7 @@ auto load_bs = [&](int ph) {
         if (b_row < K && b_col < N) {
             FLOAT4(Bs[shmem_row][shmem_col]) = FLOAT4(B[OFFSET(b_row, b_col, K, N)]);
         } else {
-            FLOAT4(Bs[shmem_row][shmem_col]) = {0.0f, 0.0f, 0.0f, 0.0f};
+            FLOAT4(Bs[shmem_row][shmem_col]) = make_float4(0.f,0.f,0.f,0.f);
         }
     }
 };
@@ -361,7 +360,7 @@ One key factor that decided occupancy is resource constraints, such as registers
 
 For [my environment setup](#test-environment-setup):
 
-- Each block uses $(BM \times BK + BK \times BN) \times 4 = 8192 = 8\text{KB}$ Shared Memory, plus $1\text{KB}$ for CUDA runtime
+- Each block uses $(BM \times BK + BK \times BN) \times 4 = 8192 = 8\text{KB}$ Shared Memory, plus $1\text{KB}$ for CUDA runtime overhead
 - Each block uses $(TM \times TN + TM + TN) \times \frac{BN}{TN} \times \frac{BM}{TM} = 20480$ Registers
 
 From above calculations, block limit by shared memory is $5$, while block limit by registers is $3$, but for most accurate data, we should also check with `NsightNsight Compute` profiler:
@@ -394,81 +393,6 @@ $$\text{Occupancy} = \frac{\text{#warps per SM}}{\text{#Max Warps per SM}} = \fr
 
 Our kernel is very balanced, and occupancy looks fine!
 
-## Part 8: Double Buffering (v5)
-
-Double buffering is another term for pipelining.
-
-Double buffering is simply, loading data into one buffer, and then doing computation in the other. Since there are do data dependencies in this case, while we are fetching data in one buffer, we can do computation in the other one.
-
-The function body is almost identical to previous ones, only that now we have two buffers for `AsT` and `Bs`
-
-```cpp
-__shared__ float AsT[2][BK][BM];
-__shared__ float Bs[2][BK][BN];
-
-int ph = 0;
-int curr_stage = 0, other_stage = 1;
-load_ast(ph, curr_stage);
-load_bs(ph, curr_stage);
-__syncthreads();
-
-for (ph = 1; ph < CEIL(K, BK); ph++) {
-    load_ast(ph, other_stage);
-    load_bs(ph, other_stage);
-
-    for (int k = 0; k < BK; k++) {
-        load_ar(k, curr_stage);
-        load_br(k, curr_stage);
-        mma();
-    }
-    __syncthreads();
-    curr_stage = other_stage;
-    other_stage = 1 - curr_stage;
-}
-
-for (int k = 0; k < BK; k++) {
-    load_ar(k, curr_stage);
-    load_br(k, curr_stage);
-    mma();
-}
-
-__syncthreads();
-store_c();
-```
-
-By comparing the performance of `v5` with that of `v4` on $M = N = K = 4096$, one can see that double buffering might **even be a drawback** here, because we intentionally extended our "stages", if the benefit of pipelining and overlapping fail to outweigh the hassle, we should disable it. I believe this is also why double buffering is part of CUTLASS GEMM policies (selectable).
-
-On small matrices, double buffering works very well, mainly because matmul of smaller matrices are **more memory bound**.
-
-|Order|sgemm_v4(GFLOPS)|sgemm_v5(GFLOPS)|
-|-|-|-|
-|2|0.01|0.01|
-|4|0.04|0.04|
-|8|0.28|0.29|
-|16|1.70|1.73|
-|32|9.11|9.96|
-|64|43.64|50.44|
-|128|142.06|158.45|
-|256|679.35|781.56|
-|512|3023.90|3564.61|
-|1024|12822.91|14742.83|
-
-One could also do double buffering not just for shared memory but even for registers, which I might try in the future.
-
-## Part 9: Warp Tile (v6)
-
-To be honest, I do not really know the benefits of warp tiling, and this is on my TODO list, I guess it has something to do with overlapping/warp scheduling/bank conflict reduction.
-
-I get to know about this hierachy from this paper: [Strassen's Algorithm Reloaded on GPUs](https://dl.acm.org/doi/10.1145/3372419), and they have a really nice and clear illustration.
-
-![CUTLASS hierarchies](../images/gpu/warp_tile.jpg)
-
-## Final Remarks
-
-- Looking back, from my own experience, thinking about offsets introduced by block, warp, thread is very helpful.
-- Building solutions in a progressive and escalating fashion improves my understandings a lot.
-- For smaller/larger matrices, finetuning, profiling, adjusting hyper-parameters such as `BM, BK, BN, TM, TK` is very important; Current code only works best on `M = N = K = 4096`
-
 ## Additionally Required
 
 In the original school project, we are also required:
@@ -477,18 +401,9 @@ In the original school project, we are also required:
 - Parallelize **as much as possible**! (No sequential reduction in the main process)
 - Perform SSSP algorithm on these two minimums
 
-## Future Works
-
-1. Have more illustrations
-2. Have more Nsight related analysis (school server takes forever to open `nsys-ui`)
-3. Consider blank conflict of registers
-4. Double buffering for registers
-5. PTX analysis and so on
-
 ## References
 
 - [Understanding the Roofline Model](https://dando18.github.io/posts/2020/04/02/roofline-model)
-- [Advanced Matrix Multiplication Optimization on NVIDIA GPUs](https://salykova.github.io/sgemm-gpu)
 - [How to Optimize a CUDA Matmul Kernel for cuBLAS-like Performance: a Worklog](https://siboehm.com/articles/22/CUDA-MMM)
 - [Strassen’s Algorithm Reloaded on GPUs](https://dl.acm.org/doi/10.1145/3372419)
 - [Floating Point and IEEE 754 Compliance for NVIDIA GPUs](https://docs.nvidia.com/cuda/floating-point/index.html#the-fused-multiply-add-fma)
