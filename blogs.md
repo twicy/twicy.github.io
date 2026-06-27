@@ -16,3 +16,4 @@ title: Blogs
 ## Other
 
 - \[2025.12\] [Volunteering Teaching](/blogs/volunteering.html)
+- \[2026.06\] [Second Mathematical Crisis](/blogs/other/second_mathematical_crisis.html)
