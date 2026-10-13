@@ -28,7 +28,7 @@ Stony Brook University, Coursework of [ESE 565: Parallel Processing Architecture
 
 ### CXL-based VM Live Migration -- (2025.04 - 2025.06)
 
-Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.edu/~ezk/), [Dr. Tyler Estro](https://www.fsl.cs.stonybrook.edu/~tyler/), [Mr. Daniel Berger](https://www.microsoft.com/en-us/research/people/daberg/), [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/), [Prof. Geoff Kuenning](https://scholar.google.com/citations?user=wVjW_1MAAAAJ&hl=en)
+Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.edu/~ezk/), [Dr. Tyler Estro](https://www.fsl.cs.stonybrook.edu/~tyler/), [Dr. Daniel Berger](https://www.microsoft.com/en-us/research/people/daberg/), [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/), [Prof. Geoff Kuenning](https://scholar.google.com/citations?user=wVjW_1MAAAAJ&hl=en)
 
 - **Background**: VM live migration is a widely utilized technique in data centers for system upgrade, load balancing, etc. Existing VM live migration leverages TCP/IP or RDMA as its underlying data transmission channel, **inevitably having a data copy at the `dst` side**, which is widely deemed as a price that must be paid.
 - However, this axiom-like assumption is now **overturned** by hardware memory pooling, provided by commodity-ready [Compute Express Link (CXL)](https://computeexpresslink.org/) 2.0.
@@ -54,7 +54,7 @@ Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stony
   - IRQ CPU affinity tuning via smp_affinity for improved parallelism
 - Achievements:
   - Achieved 50% throughput improvement over the previous generation under the iperf3 benchmark
-  - We are the [first students in the past 5 years](https://www.linkedin.com/posts/yuchen-tang-b49a37190_thrilled-to-share-that-our-joint-work-on-activity-7320867195838701570-IxKV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC0A4KkB_ikcsCKVg_BEXlplJZeRxyaKkiU) to actually deliver a steady and high-performance driver
+  - We are the [first students in the past 5 years](https://www.linkedin.com/posts/yuchen-tang-b49a37190_thrilled-to-share-that-our-joint-work-on-activity-7320867195838701570-IxKV) to actually deliver a steady and high-performance driver
   - It has been running smoothly and bug-free for **over six months**, reliably serving as core infrastructure for the [COMPAS lab](https://compas.cs.stonybrook.edu/) — something its predecessor had **NEVER** achieved.
 
   ![Instructor comment](/assets/images/projects/nic-instructor-comment.jpg)

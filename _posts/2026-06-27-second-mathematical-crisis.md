@@ -11,7 +11,7 @@ topic: Other
 
 This blog is an almost identical replay of this educational video series:
 
-- [【数学史】数学危机（上）——无穷小量的幽灵与分析学的严谨化](https://www.bilibili.com/video/BV1ZnqDBhEvm?spm_id_from=333.788.videopod.sections&vd_source=b676aa6b65a2aa07f663041555254817)
+- [【数学史】数学危机（上）——无穷小量的幽灵与分析学的严谨化](https://www.bilibili.com/video/BV1ZnqDBhEvm)
 
 I personally find them extremely interesting, and wish I had watched them earlier when I was in college.
 
@@ -21,7 +21,7 @@ Long before the debut of the second mathematical crisis, ancient Greek philosoph
 
 > In a race, the quickest runner can never over­take the slowest, since the pursuer must first reach the point whence the pursued started, so that the slower must always hold a lead.
 
-If we quantize the problem to, Achilles (the quickest runner) moves at **10 m/s** and the tortoise (the slowest) moves at **1 m/s**, and the tortoise was **9 m ahead** of Achilles. Zeno is saying, the accumulated time that Achilles spent reaching the point the tortoise was, which can be calculated below
+To put numbers on the problem, say Achilles (the quickest runner) moves at **10 m/s** and the tortoise (the slowest) moves at **1 m/s**, and the tortoise was **9 m ahead** of Achilles. Zeno is saying, the accumulated time that Achilles spent reaching the point the tortoise was, which can be calculated below
 
 $$
 t = 0.9 + 0.09 + 0.009 + ...
@@ -232,7 +232,7 @@ $$
 \sum_{n=1}^{\infty}\frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots
 $$
 
-At this time, we are still lack of a formal definition of infinitesimals and limits.
+At this time, there was still no formal definition of infinitesimals and limits.
 
 Another fun fact about d'Alembert is, he worked with Denis Diderot in editing *Encyclopédie*. It was the first encyclopedia to include contributions from many named contributors and the first to describe the mechanical arts.
 
@@ -248,7 +248,7 @@ A representative quotation:
 
 ## 4. Euler and Lagrange
 
-On the other side, there are people who does not care about the definition of infinitesimals at all.
+On the other side, there were people who did not care about the definition of infinitesimals at all.
 
 Euler was unconcerned by philosophical objections.
 
@@ -256,7 +256,7 @@ Euler was unconcerned by philosophical objections.
 
 Unlike Berkeley, Euler was primarily interested in solving mathematical and physical problems rather than debating philosophical foundations. His work spanned mechanics, astronomy, optics, fluid dynamics, number theory, and engineering.
 
-![Bridges of Konigsberg](/assets/images/posts/second-mathematical-crisis/bridges-of-konigsberg.png)
+![Bridges of Königsberg](/assets/images/posts/second-mathematical-crisis/bridges-of-konigsberg.png)
 
 To Euler, the remarkable success of infinitesimal methods in producing correct results was itself compelling evidence of their validity. This pragmatic attitude explains why he regarded Berkeley's criticism as a philosophical concern rather than a mathematical obstacle.
 
@@ -272,7 +272,7 @@ Brook Taylor was a younger contemporary of Isaac Newton and, like Newton, a Fell
 
 ![Isaac Newton](/assets/images/posts/second-mathematical-crisis/isaac-newton-westminster.jpg)
 
-One of Newton's many remarkable contributions was his generalization of the classical binomial theorem. Instead of restricting the exponent to positive integers, Newton showed that the expansion also works for arbitrary real (and later, even complex) exponents, provided the resulting infinite series converges.
+One of Newton's many remarkable contributions was his generalization of the classical binomial theorem. Instead of restricting the exponent to positive integers, Newton showed that the expansion also works for fractional and negative exponents (later mathematicians extended it to arbitrary real and even complex exponents), provided the resulting infinite series converges.
 
 $$
 (1+x)^k = \sum_{n=0}^{\infty} \binom{k}{n}x^n = 1 + kx + \frac{k(k-1)}{2!}x^2 + \frac{k(k-1)(k-2)}{3!}x^3 + \cdots
@@ -404,13 +404,13 @@ Again, including more terms produces increasingly accurate approximations.
 
 ### The problem of Taylor Series
 
-Using Taylor Expansion, instead of using $\approx$ or guilty consciencely putting a $=$ here, we can confidently place an $=$ between $0.99999\ldots$ and $1$, because
+Using Taylor Expansion, instead of using $\approx$ or putting a $=$ here with a guilty conscience, we can confidently place an $=$ between $0.99999\ldots$ and $1$, because
 
 $$
-f(x) = \frac{1}{1 - x}, f^{(1)}(x) = \frac{1}{(1 - x)^2}, f^{(2)}(x) = \frac{2}{(1 - x)^3}, \cdots, f^{(n)}(x) = \frac{n!}{(1 - x)^n}
+f(x) = \frac{1}{1 - x}, f^{(1)}(x) = \frac{1}{(1 - x)^2}, f^{(2)}(x) = \frac{2}{(1 - x)^3}, \cdots, f^{(n)}(x) = \frac{n!}{(1 - x)^{n+1}}
 $$
 
-Therefore $f^{n}(0) = n!$
+Therefore $f^{(n)}(0) = n!$
 
 $$
 \frac{1}{1 - x} = f(x) = \sum_{n=0}^{\infty}
@@ -453,14 +453,28 @@ $$
 However, if we substitute with $x = \frac{1}{2}$, it works again
 
 $$
-1.118033989\cdots =\sqrt{1 + (\frac{1}{2})^2} \approx = 1.118038177\cdots
+1.118033989\cdots =\sqrt{1 + (\frac{1}{2})^2} \approx 1.118038177\cdots
 $$
 
-Lagrange's hope that every sufficiently smooth function could be represented by its Taylor series, died, and thus comes the Lagrange Remainder, appended to Taylor's Theorem
+These two failures only mean that the series diverges when $x$ is too far from $x_0$. The real blow to Lagrange's program came from Cauchy in 1823: the function
 
 $$
-f(x) = \sum_{n=0}^{\infty}
-\frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + R_{n}(x).
+f(x) =
+\begin{cases}
+e^{-1/x^2}, & x \neq 0 \\
+0, & x = 0
+\end{cases}
+$$
+
+is smooth everywhere and $f^{(n)}(0) = 0$ for every $n$, so its Taylor series at $0$ is identically $0$, yet $f(x) > 0$ for every $x \neq 0$. The series converges everywhere, just not to $f$.
+
+So Lagrange's hope that every sufficiently smooth function could be represented by its Taylor series died. What survives is Taylor's theorem with a remainder term, which Lagrange himself gave in the same 1797 book: for some $\xi$ between $x_0$ and $x$,
+
+$$
+f(x) = \sum_{k=0}^{n}
+\frac{f^{(k)}(x_0)}{k!}(x - x_0)^k + R_{n}(x),
+\qquad
+R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - x_0)^{n+1}.
 $$
 
 ## 5. Augustin-Louis Cauchy
@@ -482,7 +496,7 @@ Karl Weierstrass has a famous function named after him, Weierstrass Function.
 $$
 f(x) = \sum_{n = 0}^{\infty}a^n\cos(b^n \pi x)
 $$
-, where $0<a < 1$ and $b$ is a positive odd integer and $ab > 1 +\frac{3}{2}\pi$
+where $0<a<1$, $b$ is a positive odd integer, and $ab > 1 +\frac{3}{2}\pi$.
 
 ![Weierstrass Function](/assets/images/posts/second-mathematical-crisis/weierstrass-function.jpg)
 
@@ -509,7 +523,7 @@ $$
 }
 $$
 
-# References
+## References
 
 1. Berkeley, G. (1734). *The Analyst; or, A Discourse Addressed to an Infidel Mathematician.*
 2. Bayes, T. (1736). *An Introduction to the Doctrine of Fluxions.*

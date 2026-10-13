@@ -7,7 +7,7 @@ topic: Other
 
 # Volunteering
 
-Time flies. It is hard to believe that six years have passed since I left the simple and peaceful village of Sanhe. Looking back, volunteering as a teacher there was one of the most meaningful and rewarding experiences of my life.
+Time flies. It is hard to believe that almost eight years have passed since I left the simple and peaceful village of Sanhe. Looking back, volunteering as a teacher there was one of the most meaningful and rewarding experiences of my life.
 
 ## Part 1: Sanhe at First Sight
 
