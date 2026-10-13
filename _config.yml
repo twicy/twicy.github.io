@@ -1,40 +1,25 @@
 title: Yuchen Tang
-# tagline: Here is personal website of Hanlin Cai. Powered by Jekyll, based on the Minimal Mistakes theme.
-#description: Two roads diverged in woods, I took the one less traveled by.
-#Comment out url when working locally to resolve base urls correctly
-#url: https://caihanlin.com
+author: Yuchen Tang
+# Feed subtitle. Setting it here also keeps local builds from querying the GitHub API.
+description: Projects, publications and blog posts on systems, networking and GPU programming.
+# GitHub Pages sets `url` automatically (https://twicy.github.io).
 
-# Owner/author information
+# Owner/author information, shown in the sidebar.
+# Optional keys: bio, scholar (full Google Scholar URL), orcid (iD), twitter (handle).
 owner:
   name: Yuchen Tang
-  avatar: yuchentang.jpg
- # bio:
+  avatar: /assets/images/site/avatar.jpg
   email: garretttang@outlook.com
-  # cv: https://caihanlin.com/file/CV-HanlinCAI.pdf
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  #twitter: lancecai2002
+  cv: /files/Yuchen_Tang_20251202.pdf
+  orcid: "0009-0005-7301-5101"
   github: twicy
   linkedin: yuchen-tang-b49a37190
-  #scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
-  #bilibili: 594030035
-  #researchgate: https://www.researchgate.net/profile/Hanlin-Cai
-  #zhihu: https://www.zhihu.com/people/chlire
-  # facebook: caihanlin2002
-  # instagram: lancecai2002
-  # lastfm:
-  # tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  # google_plus:
 
-# Analytics and webmaster tools stuff goes here
-# https://search.google.com/search-console/ownership
+# Google Search Console verification
 google_verify: "bXA3lQw9buDJZH2NwblukCeAtGopATq9dzbDNkMHwVs"
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 # bing_verify: ""
 
-# Links to include in top navigation
-# For external links add external: true
+# Top navigation. For external links add `external: true`.
 links:
   - title: About Me
     url: /
@@ -46,45 +31,50 @@ links:
     url: /publications/
   - title: Services
     url: /services/
-#  - title: Awards
-#    url: /awards/
-#  - title: Teams
-#    url: /teams/
-#  - title: Hobbies
-#    url: /hobbies/
 
+# Blog post topics, in the order the Blogs page lists them.
+# Posts without a `topic` are listed under the last one.
+blog_topics:
+  - Operating System and Kernel Bypassing
+  - GPU and CUDA
+  - Other
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: China/Beijing
+timezone: America/Los_Angeles
 future: true
 highlighter: rouge
-# markdown: kramdown
-# markdown: redcarpet
-# pygments: true
+permalink: /:categories/:title
 
+plugins:
+  - jekyll-feed    # /feed.xml (Atom) of the blog posts
+  - jekyll-sitemap # /sitemap.xml and /robots.txt
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
-
+defaults:
+  - scope:
+      type: posts
+    values:
+      layout: page
+      permalink: /blogs/:title.html # e.g. _posts/2026-11-01-foo.md -> /blogs/foo.html
+  - scope:
+      path: google491f5d38f903eb47.html
+    values:
+      sitemap: false
 
 kramdown:
+  input: GFM
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  enable_coderay: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
 
-  # coderay:
-  #   coderay_line_numbers:
-  #   coderay_line_numbers_start: 1
-  #   coderay_tab_width: 4
-  #   coderay_bold_every: 10
-  #   coderay_css: class
+# Projects, Publications, Services and the Blogs index; their URLs come from `permalink`.
+include:
+  - _pages
 
-
-# disqus settings:
-disqus:
-  shortname: twicy
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .idea
+  - README.md

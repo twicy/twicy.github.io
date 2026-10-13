@@ -1,0 +1,59 @@
+<script>
+  // kramdown (the Markdown engine GitHub Pages uses) only treats `$$...$$` as display
+  // math when it is surrounded by blank lines; otherwise it emits inline math `\(...\)`.
+  // Promote inline math that was written on its own line(s) back to display math so
+  // posts render the way they look in a Markdown editor. `$$...$$` within a line
+  // (e.g. a bullet that is just a formula) stays inline.
+  function promoteDisplayMath(root) {
+    if (!root) return;
+    var ALONE_ON_LINE = /(^|\n)[ \t]*\\\(((?:(?!\\[()])[\s\S])*?)\\\)[ \t]*(?=\n|$)/g;
+    var BLOCK_PARENT = /^(P|LI|DD|DT|TD|TH|BLOCKQUOTE|DIV)$/;
+    var isLineBoundary = function (sibling) { return !sibling || sibling.nodeName === 'BR'; };
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) {
+      var n = walker.currentNode;
+      if (n.nodeValue.indexOf('\\(') !== -1 && !n.parentNode.closest('pre, code, .no-math')) nodes.push(n);
+    }
+    nodes.forEach(function (node) {
+      var text = node.nodeValue;
+      var inBlock = BLOCK_PARENT.test(node.parentNode.nodeName);
+      node.nodeValue = text.replace(ALONE_ON_LINE, function (match, lead, tex, offset) {
+        var newlineBefore = lead === '\n';
+        var newlineAfter = offset + match.length < text.length; // the lookahead matched "\n"
+        var startsLine = newlineBefore || (inBlock && isLineBoundary(node.previousSibling));
+        var endsLine = newlineAfter || (inBlock && isLineBoundary(node.nextSibling));
+        var promote = startsLine && endsLine && (newlineBefore || newlineAfter);
+        return promote ? lead + '\\[' + tex + '\\]' : match;
+      });
+    });
+  }
+
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      ignoreHtmlClass: 'no-math'   // add class="no-math" to an element to leave its "$" alone
+    },
+    output: {
+      displayOverflow: 'linebreak' // wrap long display equations instead of overflowing on phones
+    },
+    startup: {
+      ready: function () {
+        MathJax.startup.defaultReady();
+        // kramdown turns `\#` inside `$...$` into a bare `#`, which TeX rejects. Read a `#`
+        // that is not a macro parameter (`#1`) as a literal `#`.
+        MathJax.startup.input[0].preFilters.add(function (args) {
+          args.math.math = args.math.math.replace(/\\.|#(?!\d)/g, function (m) { return m === '#' ? '\\#' : m; });
+        });
+      },
+      pageReady: function () {
+        promoteDisplayMath(document.querySelector('.content'));
+        return MathJax.startup.defaultPageReady();
+      }
+    }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-chtml.js"></script>

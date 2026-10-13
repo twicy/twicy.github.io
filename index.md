@@ -10,4 +10,4 @@ Before graduate school, I worked for **two years at Huawei as an Operating Syste
 
 I received my **B.S. in Computer Science from the University of Michigan** and **B.S. in Electrical and Computer Engineering from Shanghai Jiao Tong University**.
 
-You can find more details in my **[resume](files/Yuchen_Tang_20251202.pdf)**. Feel free to reach out if you'd like to connect!
+You can find more details in my **[resume]({{ site.owner.cv }})**. Feel free to reach out if you'd like to connect!
