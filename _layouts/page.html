@@ -5,4 +5,18 @@ layout: default
 hide_title: true
 comments: true
 ---
+{%- comment -%}
+  A post with `description:` in its front matter gets a summary card right under
+  its "# Title" heading (or at the top, if the post has no h1).
+{%- endcomment -%}
+{%- if page.description -%}
+  {%- capture summary_card %}{% include post-summary.html %}{% endcapture -%}
+  {%- if content contains '</h1>' -%}
+    {%- assign after_title = '</h1>' | append: summary_card -%}
+{{ content | replace_first: '</h1>', after_title }}
+  {%- else -%}
+{{ summary_card }}{{ content }}
+  {%- endif -%}
+{%- else -%}
 {{ content }}
+{%- endif %}

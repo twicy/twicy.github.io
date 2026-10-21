@@ -432,6 +432,112 @@ summary {
   cursor: pointer;
 }
 
+/* AI summary card (_includes/post-summary.html) ========================= */
+/* A 1px gradient border that spins while the summary streams in, then rests. */
+@property --summary-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+.summary-card {
+  --summary-bg: #fafafb;
+  --summary-gradient: #2563eb, #7c3aed, #db2777, #7c3aed, #2563eb;
+  margin: 1.1em 0 1.4em;
+  padding: 0.8em 1.15em 0.95em;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background:
+    linear-gradient(var(--summary-bg), var(--summary-bg)) padding-box,
+    conic-gradient(from var(--summary-angle), var(--summary-gradient)) border-box;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+  transition: box-shadow 0.9s ease;
+}
+.summary-card.is-streaming {
+  animation: summary-spin var(--summary-time, 2.5s) cubic-bezier(0.3, 0.1, 0.3, 1);
+  box-shadow: 0 10px 30px -16px rgb(124 58 237 / 0.6), 0 0 0 4px rgb(124 58 237 / 0.06);
+}
+.summary-head {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-bottom: 0.3em;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+.summary-spark {
+  flex: none;
+  width: 1.05em;
+  height: 1.05em;
+  fill: #7c3aed;
+}
+.is-streaming .summary-spark {
+  animation: summary-twinkle 1.1s ease-in-out infinite;
+}
+.summary-label {
+  background: linear-gradient(90deg, var(--summary-gradient)) 0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.is-streaming .summary-label {
+  animation: summary-shimmer 1.4s linear infinite;
+}
+.summary-by {
+  margin-left: auto;
+  color: var(--fg-muted);
+}
+.summary-text {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.65;
+}
+/* Words start hidden but keep their place, so the card never changes height. */
+.summary-card.is-armed .summary-word {
+  opacity: 0;
+  filter: blur(3px);
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+.summary-card.is-armed .summary-word.is-on {
+  opacity: 1;
+  filter: none;
+}
+/* An empty inline caret, drawn by ::after: it takes no width and adds no line
+   break opportunity, so it stays on the word's line and never re-wraps the text. */
+.summary-caret {
+  position: relative;
+}
+.summary-caret::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.15em;
+  width: 0.45em;
+  height: 1em;
+  border-radius: 2px;
+  background: linear-gradient(#7c3aed, #db2777);
+  animation: summary-blink 0.8s steps(1) infinite;
+}
+.is-done .summary-caret {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+@keyframes summary-spin {
+  to { --summary-angle: 720deg; }
+}
+@keyframes summary-shimmer {
+  to { background-position: -200% 0; }
+}
+@keyframes summary-twinkle {
+  50% { transform: scale(0.75) rotate(45deg); opacity: 0.7; }
+}
+@keyframes summary-blink {
+  50% { opacity: 0; }
+}
+
 /* Section permalinks (added by _includes/scripts.html) =================== */
 .content h2,
 .content h3,
@@ -594,8 +700,13 @@ mjx-container[display="true"] {
   .sidebar,
   .comments,
   .site-footer,
-  .heading-anchor {
+  .heading-anchor,
+  .summary-caret {
     display: none !important;
+  }
+  .summary-word {
+    opacity: 1 !important;
+    filter: none !important;
   }
   .site-body {
     display: block;

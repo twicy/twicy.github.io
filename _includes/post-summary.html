@@ -1,0 +1,75 @@
+{%- comment -%}
+  Summary card shown under a post's title, from the `description:` in its front
+  matter (the same text search results, link previews and the RSS feed show).
+  The card labels it as an AI summary by Claude; change the label if you write
+  your own. The full text is in the HTML, so no-JS and reduced-motion visitors
+  get it as is; the script only animates its arrival.
+{%- endcomment -%}
+<aside class="summary-card" aria-label="AI summary of this post">
+  <div class="summary-head">
+    <svg class="summary-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c.6 5.2 2.9 8.6 10.5 10.5-7.6 1.9-9.9 5.3-10.5 10.5C11.4 17.3 9.1 13.9 1.5 12 9.1 10.1 11.4 6.7 12 1.5z"/></svg>
+    <span class="summary-label">AI Summary</span>
+    <span class="summary-by" title="Written by Claude (Anthropic) from the text of this post">by Claude</span>
+  </div>
+  <p class="summary-text">{{ page.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+</aside>
+<script>
+  // Stream the summary in word by word, like a model generating it, once the
+  // card scrolls into view. Runs right after the card so the words are hidden
+  // before the first paint.
+  (function () {
+    var card = document.currentScript.previousElementSibling;
+    if (!('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var text = card.querySelector('.summary-text');
+    var words = [];
+    var walker = document.createTreeWalker(text, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (node) {
+      var frag = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(function (part) {
+        if (!part) return;
+        if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+        var span = document.createElement('span');
+        span.className = 'summary-word';
+        span.textContent = part;
+        frag.appendChild(span);
+        words.push(span);
+      });
+      node.replaceWith(frag);
+    });
+
+    if (!words.length) return;
+
+    var caret = document.createElement('span');
+    caret.className = 'summary-caret';
+    caret.setAttribute('aria-hidden', 'true');
+    var perWord = 32; // ms
+    card.style.setProperty('--summary-time', (words.length * perWord + 600) + 'ms');
+    card.classList.add('is-armed');
+
+    function stream() {
+      card.classList.add('is-streaming');
+      var start = performance.now(), shown = 0;
+      (function step(now) {
+        var target = Math.min(words.length, Math.floor((now - start) / perWord) + 1);
+        while (shown < target) words[shown++].classList.add('is-on');
+        words[shown - 1].after(caret);
+        if (shown < words.length) return requestAnimationFrame(step);
+        setTimeout(function () {
+          card.classList.remove('is-streaming');
+          card.classList.add('is-done');
+          setTimeout(function () { caret.remove(); }, 400);
+        }, 900);
+      })(start);
+    }
+
+    new IntersectionObserver(function (entries, observer) {
+      if (!entries[0].isIntersecting) return;
+      observer.disconnect();
+      setTimeout(stream, 250);
+    }, { threshold: 0.4 }).observe(card);
+  })();
+</script>

@@ -24,5 +24,3 @@ title: Blogs
 {% endfor -%}
 {%- endif -%}
 {%- endfor %}
-
-Subscribe via [RSS]({{ "/feed.xml" | relative_url }}).

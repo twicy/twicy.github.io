@@ -3,6 +3,13 @@ layout: page
 permalink: /blogs/volunteering.html
 title: Volunteer Teaching in Yunnan
 topic: Other
+description: >-
+  Almost eight years later, a look back at volunteering as a math teacher in the village of
+  Sanhe in Yunnan. Through photos and the students' own writing, the post shows school days
+  that run from 6 a.m. to 10:20 p.m., children raised by grandparents while their parents work
+  far away, and the loneliness that comes with it. It closes with a classroom lesson about
+  memorizing versus understanding, and how the experience made the author more grateful and
+  less willing to waste time.
 ---
 
 # Volunteering

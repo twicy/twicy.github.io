@@ -3,6 +3,13 @@ layout: page
 permalink: /blogs/other/second_mathematical_crisis.html
 title: The Second Mathematical Crisis
 topic: Other
+description: >-
+  How calculus got rigorous foundations. Starting from Zeno's paradox and whether 0.999…
+  equals 1, the post follows Berkeley's attack on infinitesimals as "ghosts of departed
+  quantities", the responses of Bayes, d'Alembert and Euler, and Lagrange's attempt to rebuild
+  calculus on Taylor series, which failed because a smooth function need not equal its Taylor
+  series. It ends with Cauchy, Weierstrass and the ε–δ definition of a limit. Retold from a
+  Bilibili video series.
 ---
 
 # The Second Mathematical Crisis
