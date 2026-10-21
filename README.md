@@ -1,6 +1,6 @@
 # About Me
 
-Hi, I am Yuchen Tang. I am currently a Member of Technical Staff on the Kernel Team, working on the high-performance FlashBlade and FlashArray storage systems. Before that, I worked for two years at Huawei as an Operating System Engineer, and then completed my M.S. in Computer Engineering at Stony Brook University. My interest lies in building solutions for **next generation data centers**, from multiple perspectives, including memory, networks and storage.
+Hi, I am Yuchen Tang. I am currently a Member of Technical Staff at Everpure (formerly Pure Storage), working on the high-performance FlashBlade and FlashArray storage systems. Before that, I worked for two years at Huawei as an Operating System Engineer, and then completed my M.S. in Computer Engineering at Stony Brook University. My interest lies in building solutions for **next generation data centers**, from multiple perspectives, including memory, networks and storage.
 
 Website: <https://twicy.github.io>
 

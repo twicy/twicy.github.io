@@ -14,7 +14,7 @@
   </aside>
 
   <main id="content" class="main">
-    <article class="content">
+    <article class="content{% if page.class %} {{ page.class }}{% endif %}">
       {% unless layout.hide_title %}{% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}{% endunless %}
       {{ content | replace: '<img src=', '<img loading="lazy" decoding="async" src=' }}
     </article>

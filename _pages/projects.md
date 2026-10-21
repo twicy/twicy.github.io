@@ -1,10 +1,12 @@
 ---
+class: projects # styles in assets/css/main.css
 layout: default
 permalink: /projects/index.html
 title: Projects
 ---
 
-### SGEMM + Two Minimum Value and Index Searching -- (2025.09 - 2025.12)
+### SGEMM + Two Minimum Value and Index Searching *2025.09 -- 2025.12*{: .when}
+{: #sgemm}
 
 Stony Brook University, Coursework of [ESE 565: Parallel Processing Architectures](http://www.ece.sunysb.edu/~midor/ESE565/index.html) Fall 2025, Advisor: [Prof. Mikhail Dorojevets](https://www.ece.stonybrook.edu/~midor/)
 
@@ -26,7 +28,8 @@ Stony Brook University, Coursework of [ESE 565: Parallel Processing Architecture
   ![The memory and thread hierarchies in the CUDA programming model.](/assets/images/projects/gpu-arch.png)
   Image source: [Strassen's Algorithm Reloaded on GPUs](https://dl.acm.org/doi/10.1145/3372419)
 
-### CXL-based VM Live Migration -- (2025.04 - 2025.06)
+### CXL-based VM Live Migration *2025.04 -- 2025.06*{: .when}
+{: #cxl-live-migration}
 
 Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.edu/~ezk/), [Dr. Tyler Estro](https://www.fsl.cs.stonybrook.edu/~tyler/), [Dr. Daniel Berger](https://www.microsoft.com/en-us/research/people/daberg/), [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/), [Prof. Geoff Kuenning](https://scholar.google.com/citations?user=wVjW_1MAAAAJ&hl=en)
 
@@ -41,7 +44,8 @@ Stony Brook University, Advisor: [Prof. Erez Zadok](https://www3.cs.stonybrook.e
   ![CXL2.0 Memory Pooling](/assets/images/projects/cxl2.0-memory-pool.png)
   Image source: [Compute Express Link™ 2.0 Specification: Memory Pooling](https://computeexpresslink.org/wp-content/uploads/2023/12/CXL-2.0-Memory-Pooling.pdf)
 
-### Ethernet Network Driver Development for AMD AXI FPGA -- (2024.10 - 2025.03)
+### Ethernet Network Driver Development for AMD AXI FPGA *2024.10 -- 2025.03*{: .when}
+{: #ethernet-driver}
 
 Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stonybrook.edu/~mferdman/)
 
@@ -59,7 +63,8 @@ Stony Brook University, Advisor: [Prof. Michael Ferdman](https://compas.cs.stony
 
   ![Instructor comment](/assets/images/projects/nic-instructor-comment.jpg)
 
-### RDMA communication middleware (OpenUCX) optimization --  (2023.10 - 2024.05)
+### RDMA communication middleware (OpenUCX) optimization *2023.10 -- 2024.05*{: .when}
+{: #openucx}
 
 Huawei Technologies Co., Ltd, Advisor: [Dr. Yunfei Du](https://scholar.google.com/citations?user=6vf_uwYAAAAJ&hl=en&oi=ao), Tuo Fang, [Dr. Yuxin Ren](https://orcid.org/0000-0003-2678-9225), [Prof. Guyue (Grace) Liu](https://scholar.google.com/citations?user=9NPX8KMAAAAJ)
 
@@ -72,7 +77,8 @@ Huawei Technologies Co., Ltd, Advisor: [Dr. Yunfei Du](https://scholar.google.co
 
   ![OpenUcx Layout](/assets/images/projects/openucx-layout.jpg)
 
-### Memory node expansion utilizing FPGA-based CXL 1.1 devices --  (2023.04 - 2023.12)
+### Memory node expansion utilizing FPGA-based CXL 1.1 devices *2023.04 -- 2023.12*{: .when}
+{: #cxl-memory-expansion}
 
 - **Background**: To meet the need for more memory from HPC and database applications, our lab researched into tiered memory systems, where ideally we exploit a fast DRAM tier for performance and a slow SSD/NVM tier for capacity.
 - However such systems need tuning and clever data placement strategies to avoid severe application performance penalty. [etmem](https://github.com/openeuler-mirror/etmem), is Huawei's tiered memory system manager. It takes a traditional approach of **access bit checking and watermark comparison** to determine the temperature of a page.

@@ -1,4 +1,5 @@
 ---
+class: services # styles in assets/css/main.css
 layout: default
 permalink: /services/index.html
 title: Services

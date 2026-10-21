@@ -1,4 +1,5 @@
 ---
+class: blogs # styles in assets/css/main.css
 layout: default
 permalink: /blogs/index.html
 title: Blogs
@@ -19,8 +20,11 @@ title: Blogs
 
 ## {{ topic }}
 
-{% for post in posts -%}
-- \[{{ post.date | date: "%Y.%m" }}\] [{{ post.title }}]({{ post.url | relative_url }})
-{% endfor -%}
+<ul>
+{%- for post in posts %}
+  <li><time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y.%m" }}</time> <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+{%- endfor %}
+</ul>
+
 {%- endif -%}
 {%- endfor %}
