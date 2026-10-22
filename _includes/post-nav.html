@@ -1,0 +1,40 @@
+{%- comment -%}
+  Previous and next posts at the end of a post, and a link back to the Blogs page.
+  Posts follow the Blogs page's order (_pages/blogs.md): topic by topic as listed in
+  `blog_topics`, oldest first within a topic, so a series reads in sequence.
+{%- endcomment -%}
+{%- assign last_topic = site.blog_topics | last -%}
+{%- assign ordered = "" | split: "" -%}
+{%- for topic in site.blog_topics -%}
+  {%- assign posts = site.posts | where: "topic", topic -%}
+  {%- if topic == last_topic -%}
+    {%- assign untagged = site.posts | where_exp: "post", "post.topic == nil" -%}
+    {%- assign posts = posts | concat: untagged -%}
+  {%- endif -%}
+  {%- assign posts = posts | sort: "date" -%}
+  {%- assign ordered = ordered | concat: posts -%}
+{%- endfor -%}
+{%- assign prev_post = nil -%}
+{%- assign next_post = nil -%}
+{%- for post in ordered -%}
+  {%- if post.url == page.url -%}
+    {%- assign prev_index = forloop.index0 | minus: 1 -%}
+    {%- unless forloop.first %}{% assign prev_post = ordered[prev_index] %}{% endunless -%}
+    {%- unless forloop.last %}{% assign next_post = ordered[forloop.index] %}{% endunless -%}
+  {%- endif -%}
+{%- endfor %}
+<nav class="post-nav" aria-label="More posts">
+  {%- if prev_post %}
+  <a class="post-nav-link post-nav-prev" href="{{ prev_post.url | relative_url }}" rel="prev">
+    <span class="post-nav-label">{% include icon.html name="arrow-left" %} Previous</span>
+    <span class="post-nav-title">{{ prev_post.title | escape }}</span>
+  </a>
+  {%- endif %}
+  {%- if next_post %}
+  <a class="post-nav-link post-nav-next" href="{{ next_post.url | relative_url }}" rel="next">
+    <span class="post-nav-label">Next {% include icon.html name="arrow-right" %}</span>
+    <span class="post-nav-title">{{ next_post.title | escape }}</span>
+  </a>
+  {%- endif %}
+  <a class="post-nav-all" href="{{ '/blogs/' | relative_url }}">{% include icon.html name="list" %} Back to Blogs</a>
+</nav>

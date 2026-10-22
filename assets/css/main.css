@@ -828,6 +828,86 @@ summary {
   font-size: 0.8em;
 }
 
+/* Post navigation (_includes/post-nav.html): the previous and next posts as
+   cards, then a pill back to the Blogs page. */
+.post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  margin-top: 3rem;
+}
+.post-nav a {
+  text-decoration: none; /* ties with `.content a` and wins by coming later */
+}
+.post-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.85rem 1.1rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--fg-strong);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.post-nav-next {
+  grid-column: 2;
+  align-items: flex-end;
+  text-align: right;
+}
+.post-nav-link:hover,
+.post-nav-all:hover {
+  border-color: #bfd3fb;
+  box-shadow: 0 12px 30px -20px var(--accent-shadow);
+}
+.post-nav-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.post-nav-label .icon {
+  transition: transform 0.2s;
+}
+.post-nav-prev:hover .icon {
+  transform: translateX(-0.2em);
+}
+.post-nav-next:hover .icon {
+  transform: translateX(0.2em);
+}
+.post-nav-title {
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+.post-nav-all {
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+@media (max-width: 34em) {
+  .post-nav {
+    grid-template-columns: 1fr;
+  }
+  .post-nav-next {
+    grid-column: auto;
+  }
+}
+
 /* Services: the institution reads as a small label above its list. */
 .services > h3 {
   margin-top: 0.4em;
@@ -844,7 +924,10 @@ summary {
   .site-nav a::before,
   .blogs ul > li,
   .blogs ul > li::after,
-  .publications ul > li {
+  .publications ul > li,
+  .post-nav-link,
+  .post-nav-all,
+  .post-nav-label .icon {
     transition: none;
   }
 }
@@ -1010,6 +1093,7 @@ mjx-container[display="true"] {
   .site-nav,
   .sidebar,
   .comments,
+  .post-nav,
   .site-footer,
   .heading-anchor,
   .summary-caret,

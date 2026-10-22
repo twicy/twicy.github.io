@@ -1,6 +1,7 @@
 ---
 layout: default
-# Articles (the blog posts) carry their own "# Title" heading and get a comment section.
+# Articles (the blog posts) carry their own "# Title" heading and get a comment section;
+# posts also end with previous/next links (_includes/post-nav.html).
 # Set `comments: false` in a page's front matter to turn comments off for that page.
 hide_title: true
 comments: true
@@ -19,4 +20,7 @@ comments: true
   {%- endif -%}
 {%- else -%}
 {{ content }}
+{%- endif %}
+{%- if page.collection == "posts" %}
+{% include post-nav.html %}
 {%- endif %}
