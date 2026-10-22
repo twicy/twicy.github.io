@@ -8,7 +8,7 @@ title: Projects
 ### SGEMM + Two Minimum Value and Index Searching *2025.09 -- 2025.12*{: .when}
 {: #sgemm}
 
-Stony Brook University, Coursework of [ESE 565: Parallel Processing Architectures](http://www.ece.sunysb.edu/~midor/ESE565/index.html) Fall 2025, Advisor: [Prof. Mikhail Dorojevets](https://www.ece.stonybrook.edu/~midor/)
+Stony Brook University, Coursework of [ESE 565: Parallel Processing Architectures](http://www.ece.stonybrook.edu/~midor/ESE565/index.html) Fall 2025, Advisor: [Prof. Mikhail Dorojevets](https://www.ece.stonybrook.edu/~midor/)
 
 - **Requirement**: Perform a matrix multiplication of two randomly generated floating-point square (I generalized it to **any arbitrary size**) matrices, then find **the two minimum values and their indices** in the product matrix, with sequential C/C++, ISPC (with multi-task), Pthread (with ISPC), OpenMP (with ISPC), 1/2 GPU CUDA, 4 GPU CUDA with MPI
   - **Challenge 1**: **Maximize parallelization** of minimum searching in each subroutine (ISPC instance/Pthread/OpenMP thread/CUDA thread block), instead of reducing it sequentially in the main route.
