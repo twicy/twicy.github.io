@@ -3,9 +3,14 @@ class: about # styles in assets/css/main.css
 layout: default
 ---
 
+{%- comment -%} The introduction sits on a frosted card (.hero in assets/css/main.css). {%- endcomment %}
+<div class="hero" markdown="1">
+
 Hi! I'm **Yuchen Tang**, a Member of Technical Staff at [Everpure](https://www.everpuredata.com/) (formerly Pure Storage), working on the [FlashBlade](https://www.everpuredata.com/products/unstructured-data-storage.html) and [FlashArray](https://www.everpuredata.com/products/block-file-object-storage.html) storage systems. I focus on **frontier dataplane technologies**, spanning offloading techniques, such as NVIDIA Data Path Accelerator (DPA), and cache injection technologies, such as Intel Data Direct I/O (DDIO) and AMD Smart Data Cache Injection (SDCI).
 
 Before graduate school, I spent two years at **Huawei** as an Operating System Engineer, working on tiered memory systems and HPC systems.
+
+</div>
 
 ## Interests
 

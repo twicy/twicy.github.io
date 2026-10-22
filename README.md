@@ -62,6 +62,6 @@ The design is not original. Thanks to:
 1. [GitHub Pages](https://pages.github.com/) and [Jekyll](https://jekyllrb.com/)
 2. [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by Michael Rose (MIT), the theme this site's look comes from
 3. [GuangLun2000](https://github.com/GuangLun2000/GuangLun2000.github.io) (Hanlin Cai), whose adaptation of that theme this site started from
-4. [PT Serif and PT Sans Narrow](https://www.paratype.com/public/) by ParaType (SIL Open Font License, see `assets/fonts/`)
+4. [DM Sans](https://github.com/googlefonts/dm-fonts) by Colophon Foundry (SIL Open Font License, see `assets/fonts/`); the typeface and the blue, blurred backdrop take their cue from [DeepSeek's website](https://www.deepseek.com/)
 5. Icons from [Bootstrap Icons](https://icons.getbootstrap.com/) (MIT) and [Simple Icons](https://simpleicons.org/) (CC0); syntax colors from GitHub's [Primer](https://primer.style/) (MIT)
 6. [MathJax](https://www.mathjax.org/) for math and [giscus](https://giscus.app/) for comments

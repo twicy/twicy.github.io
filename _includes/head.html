@@ -23,7 +23,7 @@
 <link rel="apple-touch-icon" href="{{ '/assets/images/site/apple-touch-icon.png' | relative_url }}">
 
 <!-- Self-hosted fonts are preloaded so text does not re-flow when they arrive. -->
-{%- assign fonts = "pt-serif-400,pt-serif-700,pt-serif-400-italic,pt-sans-narrow-700,pt-sans-narrow-400" | split: "," %}
+{%- assign fonts = "dm-sans-latin" | split: "," %}
 {%- for font in fonts %}
 <link rel="preload" href="{{ font | prepend: '/assets/fonts/' | append: '.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 {%- endfor %}
