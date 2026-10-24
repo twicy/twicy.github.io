@@ -37,6 +37,7 @@ links:
 blog_topics:
   - Operating System and Kernel Bypassing
   - GPU and CUDA
+  - Paper Notes # one post per conference; start from _drafts/paper-notes-template.md
   - Other
 
 timezone: America/Los_Angeles

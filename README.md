@@ -26,11 +26,13 @@ If you switch Ruby versions, delete `Gemfile.lock` before `bundle install`.
   ---
   title: My Post
   topic: GPU and CUDA   # one of `blog_topics` in _config.yml (sets the Blogs page section)
+  description: >-       # optional: shown in the "AI Summary" card under the title
+    One plain-text paragraph.
   ---
   ```
 
-  Add `permalink: /blogs/some/path.html` to choose a different URL. Avoid renaming a post's file once it is published: feed readers identify posts by file name and would show it again as new.
-- Posts have no automatic title (start the post with `# Title`) and a giscus comment section. Add `comments: false` to the front matter to hide comments.
+  For a Paper Notes post, copy `_drafts/paper-notes-template.md`; its comments explain how to summarize each paper. Add `permalink: /blogs/some/path.html` to choose a different URL. Avoid renaming a post's file once it is published: feed readers identify posts by file name and would show it again as new.
+- Posts have no automatic title (start the post with `# Title`), end with previous/next links in Blogs page order, and have a giscus comment section. Add `comments: false` to the front matter to hide comments.
 - Put a post's images in `assets/images/posts/<name>/` (the post file name without the date) and link them with absolute paths, e.g. `![alt](/assets/images/posts/sgemm-p1/sgemm-tile.jpg)`, so they work on the site, in the feed, and in an editor preview. Keep photos at most ~1600 px on the long side.
 
 ## Repository layout
