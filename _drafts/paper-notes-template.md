@@ -28,7 +28,7 @@ that needs more deserves its own post, linked from here.
 3. Tags: one to three from this list, spelled exactly as here, so papers can be
    grouped by tag later. Add a new tag to the list before using it.
      Network stack, Kernel bypass, RDMA, SmartNIC/DPU, Cache injection, CXL,
-     Memory tiering, Storage, Virtualization, GPU
+     Memory tiering, Storage, Virtualization, GPU, LLM training
 4. In one sentence: the key idea. Readers who skim read only this line.
 5. Background: the problem, and why existing systems fall short (2-3 sentences).
 6. Approach: the key insight first, then the mechanism that realizes it.
