@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" width="800" height="700" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c92a2a"/></marker></defs>
+<rect width="800" height="700" fill="#ffffff"/>
+<rect x="305" y="16" width="150" height="30" rx="6" fill="#f1f3f5" stroke="#868e96" stroke-width="1.5"/>
+<text x="380" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="normal">&#8220;Michigan go&#8221;</text>
+<text x="615" y="28" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">prompt</text>
+<text x="615" y="45" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">text</text>
+<line x1="380" y1="48" x2="380" y2="82" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="70" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">tokenizer</text>
+<rect x="320" y="86" width="120" height="16" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="320" y="102" width="120" height="16" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<text x="380" y="98" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="10" fill="#495057" font-weight="normal">id of &#8220;Michigan&#8221;</text>
+<text x="380" y="114" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="10" fill="#495057" font-weight="normal">id of &#8220;go&#8221;</text>
+<text x="615" y="99" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">token ids</text>
+<text x="615" y="116" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">[N]</text>
+<line x1="380" y1="120" x2="380" y2="154" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="142" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">embedding lookup: one row of the [151936, 1024] table per id</text>
+<rect x="270" y="158" width="220" height="16" rx="0" fill="#e7f5ff" stroke="#1971c2" stroke-width="1.2"/>
+<rect x="270" y="174" width="220" height="16" rx="0" fill="#e7f5ff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="615" y="171" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">embeddings X</text>
+<text x="615" y="188" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">[N, 1024]</text>
+<line x1="380" y1="192" x2="380" y2="214" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="110" y="218" width="540" height="84" rx="8" fill="#f8f9fa" stroke="#495057" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="124" y="240" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">28 decoder layers, each [N, 1024] &#8594; [N, 1024]</text>
+<text x="124" y="264" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">attention</text>
+<text x="210" y="264" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#212529" font-weight="normal">Q [N, 16, 128]</text>
+<text x="340" y="264" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#212529" font-weight="normal">K, V [N, 8, 128]</text>
+<text x="485" y="264" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#212529" font-weight="normal">scores [16, N, N]</text>
+<text x="124" y="286" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">MLP</text>
+<text x="210" y="286" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#212529" font-weight="normal">[N, 1024] &#8594; [N, 3072] &#8594; [N, 1024]</text>
+<line x1="380" y1="304" x2="380" y2="328" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="270" y="332" width="220" height="16" rx="0" fill="#ebfbee" stroke="#2f9e44" stroke-width="1.2"/>
+<rect x="270" y="348" width="220" height="16" rx="0" fill="#ebfbee" stroke="#2f9e44" stroke-width="1.2"/>
+<text x="615" y="345" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">hidden states H</text>
+<text x="615" y="362" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">[N, 1024]</text>
+<line x1="380" y1="366" x2="380" y2="400" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="388" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">LM head: H &#183; W&#7488;, W is [151936, 1024]</text>
+<rect x="170" y="404" width="420" height="16" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="170" y="420" width="420" height="16" rx="0" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="162" y="416" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">Michigan</text>
+<text x="162" y="432" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#c92a2a" font-weight="normal">go</text>
+<text x="615" y="417" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">logits</text>
+<text x="615" y="434" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">[N, 151936]</text>
+<line x1="380" y1="438" x2="380" y2="472" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="460" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">keep the last row: it predicts the next token</text>
+<rect x="170" y="476" width="420" height="16" rx="0" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="615" y="481" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">last row</text>
+<text x="615" y="498" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">[151936]</text>
+<line x1="380" y1="494" x2="380" y2="528" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="516" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">softmax</text>
+<line x1="170" y1="584" x2="590" y2="584" stroke="#adb5bd"/>
+<rect x="174" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="184" y="579" width="6" height="5" fill="#ced4da"/>
+<rect x="194" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="205" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="215" y="578" width="6" height="6" fill="#ced4da"/>
+<rect x="226" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="236" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="246" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="257" y="538" width="6" height="46" fill="#c92a2a"/>
+<rect x="267" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="278" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="288" y="579" width="6" height="5" fill="#ced4da"/>
+<rect x="298" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="309" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="319" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="330" y="578" width="6" height="6" fill="#ced4da"/>
+<rect x="340" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="350" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="361" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="371" y="570" width="6" height="14" fill="#868e96"/>
+<rect x="382" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="392" y="579" width="6" height="5" fill="#ced4da"/>
+<rect x="402" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="413" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="423" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="434" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="444" y="577" width="6" height="7" fill="#ced4da"/>
+<rect x="454" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="465" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="475" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="486" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="496" y="579" width="6" height="5" fill="#ced4da"/>
+<rect x="506" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="517" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="527" y="580" width="6" height="4" fill="#ced4da"/>
+<rect x="538" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="548" y="581" width="6" height="3" fill="#ced4da"/>
+<rect x="558" y="579" width="6" height="5" fill="#ced4da"/>
+<rect x="569" y="582" width="6" height="2" fill="#ced4da"/>
+<rect x="579" y="581" width="6" height="3" fill="#ced4da"/>
+<text x="269" y="550" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c92a2a" font-weight="normal">&#8220;blue&#8221; 0.73</text>
+<text x="615" y="559" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">probabilities</text>
+<text x="615" y="576" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">[151936]</text>
+<text x="615" y="592" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">non-negative, sum to 1</text>
+<line x1="380" y1="588" x2="380" y2="622" stroke="#495057" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="392" y="610" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal" font-style="italic">argmax (or sample)</text>
+<rect x="335" y="626" width="90" height="30" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="380" y="646" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#c92a2a" font-weight="bold">&#8220;blue&#8221;</text>
+<text x="615" y="638" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">next token</text>
+<text x="615" y="655" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">one id</text>
+<path d="M 333 641 L 40 641 L 40 102 L 318 102" fill="none" stroke="#c92a2a" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrR)"/>
+<text x="48" y="676" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#c92a2a" font-weight="normal" font-style="italic">append it to the input and run again</text>
+</svg>

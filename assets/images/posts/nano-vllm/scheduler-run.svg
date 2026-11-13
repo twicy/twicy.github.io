@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 410" width="770" height="410" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e03131" stroke-width="1.4"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
+<rect width="770" height="410" fill="#ffffff"/>
+<text x="20.0" y="24.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">A KV cache of only 3 blocks, four requests: step by step</text>
+<text x="165.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 1</text>
+<text x="165.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">prefill</text>
+<text x="241.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 2</text>
+<text x="241.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">decode</text>
+<text x="317.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 3</text>
+<text x="317.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">decode</text>
+<text x="393.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 4</text>
+<text x="393.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">prefill</text>
+<text x="469.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 5</text>
+<text x="469.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">decode</text>
+<text x="545.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 6</text>
+<text x="545.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">decode</text>
+<text x="621.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 7</text>
+<text x="621.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">decode</text>
+<text x="697.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">step 8</text>
+<text x="697.0" y="64.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">decode</text>
+<text x="116.0" y="89.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">seq A</text>
+<rect x="130.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#a5d8ff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="165.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">prefill</text>
+<rect x="206.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="241.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="282.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="317.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="358.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#f8f9fa" stroke="#ced4da" stroke-width="1.2"/>
+<text x="393.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">sits out</text>
+<rect x="434.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="469.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="510.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="545.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="586.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="621.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="662.0" y="74.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="697.0" y="89.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<text x="116.0" y="119.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">seq B</text>
+<rect x="130.0" y="104.0" width="70.0" height="22.0" rx="3" fill="#a5d8ff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="165.0" y="119.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">prefill</text>
+<rect x="206.0" y="104.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="241.0" y="119.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="282.0" y="104.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="317.0" y="119.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">&lt;eos&gt;</text>
+<text x="362.0" y="119.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">done, block freed</text>
+<text x="116.0" y="149.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">seq C</text>
+<rect x="130.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#a5d8ff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="165.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">prefill</text>
+<rect x="206.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="241.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="282.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="317.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="358.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#f8f9fa" stroke="#ced4da" stroke-width="1.2"/>
+<text x="393.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">sits out</text>
+<rect x="434.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="469.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="510.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="545.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="586.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="621.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="662.0" y="134.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="697.0" y="149.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<text x="116.0" y="179.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">seq D</text>
+<rect x="130.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="165.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">waiting</text>
+<rect x="206.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="241.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">waiting</text>
+<rect x="282.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="317.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">waiting</text>
+<rect x="358.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#a5d8ff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="393.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">prefill</text>
+<rect x="434.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="469.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">decode</text>
+<rect x="510.0" y="164.0" width="70.0" height="22.0" rx="3" fill="url(#hatch)" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="545.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c92a2a" font-weight="bold">evicted</text>
+<rect x="586.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="621.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">waiting</text>
+<rect x="662.0" y="164.0" width="70.0" height="22.0" rx="3" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="697.0" y="179.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">waiting</text>
+<line x1="20.0" y1="199.0" x2="738.0" y2="199.0" stroke="#dee2e6" stroke-width="1"/>
+<text x="116.0" y="221.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">3 blocks</text>
+<rect x="130.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="140.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="153.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="163.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">B</text>
+<rect x="176.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="186.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="206.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="216.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="229.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="239.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">B</text>
+<rect x="252.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="262.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="282.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="292.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="305.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="315.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">B</text>
+<rect x="328.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="338.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="358.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="368.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="381.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="391.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">D</text>
+<rect x="404.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="414.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="434.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="444.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="457.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="467.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">D</text>
+<rect x="480.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="490.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="510.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="520.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="533.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="543.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">A</text>
+<rect x="556.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="566.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="586.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="596.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="609.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="619.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">A</text>
+<rect x="632.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="642.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<rect x="662.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="672.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">A</text>
+<rect x="685.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="695.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">A</text>
+<rect x="708.0" y="206.0" width="21.0" height="22.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="718.5" y="221.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">C</text>
+<text x="116.0" y="256.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="bold">step 1</text>
+<text x="130.0" y="256.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">A, B and C take the 3 blocks. D does not fit, so it waits.</text>
+<text x="116.0" y="275.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="bold">step 3</text>
+<text x="130.0" y="275.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">B emits &lt;eos&gt;; its block is freed.</text>
+<text x="116.0" y="294.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="bold">step 4</text>
+<text x="130.0" y="294.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">D takes the free block. Prefill and decode never share a step, so A and C sit out.</text>
+<text x="116.0" y="313.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="bold">step 6</text>
+<text x="130.0" y="313.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">A has filled its first block and needs a second. None is free, so D, the newest,</text>
+<text x="130.0" y="332.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">is evicted and A takes its block: A now holds 2 blocks, C holds 1.</text>
+<text x="116.0" y="351.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="bold">step 7+</text>
+<text x="130.0" y="351.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">D waits until a block is free again, when A or C finishes.</text>
+<rect x="130.0" y="375.0" width="16.0" height="14.0" rx="2" fill="#a5d8ff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="152.0" y="386.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">prefill</text>
+<rect x="218.0" y="375.0" width="16.0" height="14.0" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="240.0" y="386.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">decode</text>
+<rect x="300.0" y="375.0" width="16.0" height="14.0" rx="2" fill="#f8f9fa" stroke="#ced4da" stroke-width="1.2"/>
+<text x="322.0" y="386.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">running, sits out</text>
+<rect x="448.0" y="375.0" width="16.0" height="14.0" rx="2" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="470.0" y="386.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">waiting</text>
+<rect x="536.0" y="375.0" width="16.0" height="14.0" rx="2" fill="url(#hatch)" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="558.0" y="386.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">evicted</text>
+</svg>

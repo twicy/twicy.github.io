@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e03131" stroke-width="1.4"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
+<rect width="800" height="300" fill="#ffffff"/>
+<text x="20.0" y="24.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">Partial match: reuse stops at the first difference</text>
+<path d="M 530 74 Q 410 42 270 74" fill="none" stroke="#495057" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="410.0" y="50.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal" font-style="italic">x0..x3 attend to s0..s7</text>
+<text x="20.0" y="96.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Seq A</text>
+<rect x="150.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="165.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s0</text>
+<rect x="180.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="195.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s1</text>
+<rect x="210.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="225.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s2</text>
+<rect x="240.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="255.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s3</text>
+<rect x="150.0" y="76.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#2f9e44" stroke-width="2"/>
+<rect x="310.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="325.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s4</text>
+<rect x="340.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="355.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s5</text>
+<rect x="370.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="385.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s6</text>
+<rect x="400.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="415.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s7</text>
+<rect x="310.0" y="76.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#868e96" stroke-width="2"/>
+<rect x="470.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="485.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x0</text>
+<rect x="500.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="515.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x1</text>
+<rect x="530.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="545.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x2</text>
+<rect x="560.0" y="76.0" width="30.0" height="30.0" rx="0" fill="#f1f3f5" stroke="#868e96" stroke-width="1"/>
+<text x="575.0" y="95.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x3</text>
+<rect x="470.0" y="76.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#868e96" stroke-width="2"/>
+<text x="210.0" y="130.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">h0 = h0</text>
+<text x="210.0" y="146.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">hit: shared</text>
+<text x="370.0" y="130.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">h1 &#8800; h1&#8242;</text>
+<text x="370.0" y="146.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">miss: tokens differ</text>
+<text x="530.0" y="130.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">h2 &#8800; h2&#8242;</text>
+<text x="530.0" y="146.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">miss, though the tokens match</text>
+<text x="20.0" y="182.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Seq C</text>
+<rect x="150.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="165.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s0</text>
+<rect x="180.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="195.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s1</text>
+<rect x="210.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="225.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s2</text>
+<rect x="240.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="255.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s3</text>
+<rect x="150.0" y="162.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#2f9e44" stroke-width="2"/>
+<rect x="310.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="325.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="bold">t4</text>
+<rect x="340.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="355.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="bold">t5</text>
+<rect x="370.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="385.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="bold">t6</text>
+<rect x="400.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="415.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="bold">t7</text>
+<rect x="310.0" y="162.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#1971c2" stroke-width="2"/>
+<rect x="470.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="485.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x0</text>
+<rect x="500.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="515.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x1</text>
+<rect x="530.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="545.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x2</text>
+<rect x="560.0" y="162.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="575.0" y="181.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">x3</text>
+<rect x="470.0" y="162.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#1971c2" stroke-width="2"/>
+<path d="M 530 194 Q 410 226 270 194" fill="none" stroke="#495057" stroke-width="1.2" marker-end="url(#arr)"/>
+<text x="410.0" y="238.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal" font-style="italic">x0..x3 attend to s0..s3, t4..t7: different K and V</text>
+<text x="150.0" y="266.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">After the first miss, every later block is computed fresh (cache_miss is sticky)</text>
+<rect x="150.0" y="279.0" width="16.0" height="14.0" rx="2" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.2"/>
+<text x="172.0" y="290.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal">shared</text>
+<rect x="235.2" y="279.0" width="16.0" height="14.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<text x="257.2" y="290.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal">A only</text>
+<rect x="320.4" y="279.0" width="16.0" height="14.0" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="342.4" y="290.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal">computed for C</text>
+</svg>

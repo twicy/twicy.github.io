@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 277" width="730" height="277" font-family="Helvetica, Arial, sans-serif" font-size="14">
+<rect width="730" height="277" fill="#ffffff"/>
+<text x="66" y="22" text-anchor="start" font-size="14" fill="#212529" font-weight="bold">Without KV cache</text>
+<text x="66" y="40" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">20 token positions computed</text>
+<text x="386" y="22" text-anchor="start" font-size="14" fill="#212529" font-weight="bold">With KV cache</text>
+<text x="386" y="40" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">6 computed, 14 read from the cache</text>
+<text x="58" y="73" text-anchor="end" font-size="11" fill="#495057" font-weight="normal">step 1</text>
+<text x="58" y="85" text-anchor="end" font-size="9" fill="#868e96" font-weight="normal">prefill</text>
+<rect x="66" y="60" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="88" y="77" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="386" y="60" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="408" y="77" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="113" y="60" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="135" y="77" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="433" y="60" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="455" y="77" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<text x="486" y="77" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">&#8594; blue</text>
+<text x="58" y="110" text-anchor="end" font-size="11" fill="#495057" font-weight="normal">step 2</text>
+<rect x="66" y="93" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="88" y="110" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="386" y="93" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="408" y="110" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="113" y="93" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="135" y="110" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="433" y="93" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="455" y="110" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="160" y="93" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="182" y="110" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="480" y="93" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="502" y="110" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<text x="533" y="110" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">&#8594; !</text>
+<text x="58" y="143" text-anchor="end" font-size="11" fill="#495057" font-weight="normal">step 3</text>
+<rect x="66" y="126" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="88" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="386" y="126" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="408" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="113" y="126" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="135" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="433" y="126" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="455" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="160" y="126" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="182" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="480" y="126" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="502" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="207" y="126" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="229" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">!</text>
+<rect x="527" y="126" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="549" y="143" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">!</text>
+<text x="580" y="143" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">&#8594; Go</text>
+<text x="58" y="176" text-anchor="end" font-size="11" fill="#495057" font-weight="normal">step 4</text>
+<rect x="66" y="159" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="88" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="386" y="159" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="408" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="113" y="159" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="135" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="433" y="159" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="455" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="160" y="159" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="182" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="480" y="159" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="502" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="207" y="159" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="229" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">!</text>
+<rect x="527" y="159" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="549" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">!</text>
+<rect x="254" y="159" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="276" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Go</text>
+<rect x="574" y="159" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="596" y="176" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Go</text>
+<text x="627" y="176" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">&#8594; blue</text>
+<text x="58" y="209" text-anchor="end" font-size="11" fill="#495057" font-weight="normal">step 5</text>
+<rect x="66" y="192" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="88" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="386" y="192" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="408" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Michigan</text>
+<rect x="113" y="192" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="135" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="433" y="192" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="455" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">go</text>
+<rect x="160" y="192" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="182" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="480" y="192" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="502" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="207" y="192" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="229" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">!</text>
+<rect x="527" y="192" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="549" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">!</text>
+<rect x="254" y="192" width="44" height="26" rx="3" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="276" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Go</text>
+<rect x="574" y="192" width="44" height="26" rx="3" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="596" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">Go</text>
+<rect x="301" y="192" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="323" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<rect x="621" y="192" width="44" height="26" rx="3" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="643" y="209" text-anchor="middle" font-size="10" fill="#212529" font-weight="normal">blue</text>
+<text x="674" y="209" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">&#8594; &lt;eos&gt;</text>
+<rect x="66" y="236" width="16" height="14" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="88" y="247" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">computed for the first time</text>
+<rect x="276" y="236" width="16" height="14" rx="2" fill="#ffe3e3" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="298" y="247" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">recomputed, same result as before</text>
+<rect x="522" y="236" width="16" height="14" rx="2" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.5"/>
+<text x="544" y="247" text-anchor="start" font-size="11" fill="#495057" font-weight="normal">KV cache hit: K and V only read</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 262" width="800" height="262" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e03131" stroke-width="1.4"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker></defs>
+<rect width="800" height="262" fill="#ffffff"/>
+<text x="20.0" y="24.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">Full match: every full block is shared</text>
+<text x="210.0" y="44.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">block 0</text>
+<text x="370.0" y="44.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">block 1</text>
+<text x="530.0" y="44.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">block 2</text>
+<text x="20.0" y="72.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Seq A</text>
+<rect x="150.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="165.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s0</text>
+<rect x="180.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="195.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s1</text>
+<rect x="210.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="225.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s2</text>
+<rect x="240.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="255.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s3</text>
+<rect x="150.0" y="52.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#2f9e44" stroke-width="2"/>
+<rect x="310.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="325.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s4</text>
+<rect x="340.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="355.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s5</text>
+<rect x="370.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="385.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s6</text>
+<rect x="400.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="415.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s7</text>
+<rect x="310.0" y="52.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#2f9e44" stroke-width="2"/>
+<rect x="470.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#fff5f5" stroke="#c92a2a" stroke-width="1"/>
+<text x="485.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">a0</text>
+<rect x="500.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#fff5f5" stroke="#c92a2a" stroke-width="1"/>
+<text x="515.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">a1</text>
+<rect x="530.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#fff5f5" stroke="#c92a2a" stroke-width="1"/>
+<text x="545.0" y="71.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">a2</text>
+<rect x="560.0" y="52.0" width="30.0" height="30.0" rx="0" fill="#ffffff" stroke="#c92a2a" stroke-width="1"/>
+<rect x="470.0" y="52.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#c92a2a" stroke-width="2"/>
+<text x="210.0" y="106.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">h0 = h0</text>
+<text x="210.0" y="122.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">hit: shared</text>
+<text x="370.0" y="106.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">h1 = h1</text>
+<text x="370.0" y="122.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">hit: shared</text>
+<text x="530.0" y="106.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">not full</text>
+<text x="530.0" y="122.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">no hash, never shared</text>
+<text x="20.0" y="158.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Seq B</text>
+<rect x="150.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="165.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s0</text>
+<rect x="180.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="195.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s1</text>
+<rect x="210.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="225.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s2</text>
+<rect x="240.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="255.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s3</text>
+<rect x="150.0" y="138.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#2f9e44" stroke-width="2"/>
+<rect x="310.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="325.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s4</text>
+<rect x="340.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="355.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s5</text>
+<rect x="370.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="385.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s6</text>
+<rect x="400.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1"/>
+<text x="415.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">s7</text>
+<rect x="310.0" y="138.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#2f9e44" stroke-width="2"/>
+<rect x="470.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="485.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">b0</text>
+<rect x="500.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#d0ebff" stroke="#1971c2" stroke-width="1"/>
+<text x="515.0" y="157.0" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="11" fill="#212529" font-weight="normal">b1</text>
+<rect x="530.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#ffffff" stroke="#1971c2" stroke-width="1"/>
+<rect x="560.0" y="138.0" width="30.0" height="30.0" rx="0" fill="#ffffff" stroke="#1971c2" stroke-width="1"/>
+<rect x="470.0" y="138.0" width="120.0" height="30.0" rx="0" fill="none" stroke="#1971c2" stroke-width="2"/>
+<text x="150.0" y="198.0" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="12" fill="#495057" font-weight="normal">h0 = H(s0..s3),  h1 = H(h0, s4..s7): each hash covers everything before it</text>
+<text x="150.0" y="220.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="normal">B's prefill computes only b0 and b1; the 8 shared tokens are read from A's blocks</text>
+<rect x="150.0" y="237.0" width="16.0" height="14.0" rx="2" fill="#d3f9d8" stroke="#2f9e44" stroke-width="1.2"/>
+<text x="172.0" y="248.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal">shared, computed once</text>
+<rect x="328.2" y="237.0" width="16.0" height="14.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="350.2" y="248.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal">A only</text>
+<rect x="413.4" y="237.0" width="16.0" height="14.0" rx="2" fill="#d0ebff" stroke="#1971c2" stroke-width="1.2"/>
+<text x="435.4" y="248.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#495057" font-weight="normal">computed for B</text>
+</svg>
