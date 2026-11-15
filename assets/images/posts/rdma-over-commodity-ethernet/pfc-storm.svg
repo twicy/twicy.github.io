@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e03131" stroke-width="1.4"/></pattern><pattern id="hatch-orange" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff4e6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e8590c" stroke-width="1.4"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="arr-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#212529"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c92a2a"/></marker><marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker><marker id="arr-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7048e8"/></marker><marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker><marker id="arr-faint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker></defs>
+<rect width="820" height="420" fill="#ffffff"/>
+<text x="20.0" y="24.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">A NIC PFC storm: one broken NIC pauses the whole network</text>
+<line x1="170.0" y1="132.0" x2="330.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="170.0" y1="132.0" x2="490.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="132.0" x2="330.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="132.0" x2="490.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="132.0" x2="330.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="132.0" x2="490.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="132.0" x2="330.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="132.0" x2="490.0" y2="78.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="170.0" y1="160.0" x2="170.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="170.0" y1="160.0" x2="300.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="160.0" x2="170.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="160.0" x2="300.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="160.0" x2="520.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="160.0" x2="650.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="160.0" x2="520.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="160.0" x2="650.0" y2="214.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="170.0" y1="242.0" x2="142.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="170.0" y1="242.0" x2="170.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="170.0" y1="242.0" x2="198.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="242.0" x2="272.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="242.0" x2="300.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="300.0" y1="242.0" x2="328.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="242.0" x2="492.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="242.0" x2="520.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="520.0" y1="242.0" x2="548.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="242.0" x2="622.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="242.0" x2="650.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="650.0" y1="242.0" x2="678.0" y2="288.0" stroke="#adb5bd" stroke-width="1.2"/>
+<line x1="143.0" y1="286.3" x2="169.0" y2="243.7" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="170.0" y1="244.0" x2="170.0" y2="286.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="171.0" y1="243.7" x2="197.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="170.0" y1="212.0" x2="170.0" y2="162.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="171.8" y1="213.2" x2="298.2" y2="160.8" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="171.9" y1="131.4" x2="328.1" y2="78.6" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="172.0" y1="131.7" x2="488.0" y2="78.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="301.0" y1="130.3" x2="329.0" y2="79.7" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="301.9" y1="131.5" x2="488.1" y2="78.5" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="331.9" y1="78.5" x2="518.1" y2="131.5" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="491.0" y1="79.7" x2="519.0" y2="130.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="332.0" y1="78.3" x2="648.0" y2="131.7" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="491.9" y1="78.6" x2="648.1" y2="131.4" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="171.8" y1="160.8" x2="298.2" y2="213.2" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="300.0" y1="162.0" x2="300.0" y2="212.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="520.0" y1="162.0" x2="520.0" y2="212.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="521.8" y1="160.8" x2="648.2" y2="213.2" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="648.2" y1="160.8" x2="521.8" y2="213.2" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="650.0" y1="162.0" x2="650.0" y2="212.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="299.0" y1="243.7" x2="273.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="300.0" y1="244.0" x2="300.0" y2="286.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="301.0" y1="243.7" x2="327.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="519.0" y1="243.7" x2="493.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="520.0" y1="244.0" x2="520.0" y2="286.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="521.0" y1="243.7" x2="547.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="649.0" y1="243.7" x2="623.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="650.0" y1="244.0" x2="650.0" y2="286.0" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<line x1="651.0" y1="243.7" x2="677.0" y2="286.3" stroke="#c92a2a" stroke-width="1.8" marker-end="url(#arr-red)"/>
+<rect x="290.0" y="50.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="330.0" y="68.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Spine</text>
+<rect x="450.0" y="50.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="490.0" y="68.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Spine</text>
+<rect x="130.0" y="132.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="170.0" y="150.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="260.0" y="132.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="300.0" y="150.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="480.0" y="132.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="520.0" y="150.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="610.0" y="132.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="650.0" y="150.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="130.0" y="214.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="170.0" y="232.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="133.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#c92a2a" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="161.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="189.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="260.0" y="214.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="300.0" y="232.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="263.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="291.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="319.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="480.0" y="214.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="520.0" y="232.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="483.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="511.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="539.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="610.0" y="214.0" width="80.0" height="28.0" rx="6" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.5"/>
+<text x="650.0" y="232.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="613.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="641.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<rect x="669.0" y="288.0" width="18.0" height="22.0" rx="2" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.2"/>
+<text x="142.0" y="326.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c92a2a" font-weight="bold">server 0</text>
+<text x="142.0" y="340.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#c92a2a" font-weight="normal">broken NIC</text>
+<circle cx="128.0" cy="262.0" r="9" fill="#c92a2a"/>
+<text x="128.0" y="266.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">1</text>
+<circle cx="206.0" cy="262.0" r="9" fill="#c92a2a"/>
+<text x="206.0" y="266.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">2</text>
+<circle cx="226.0" cy="104.0" r="9" fill="#c92a2a"/>
+<text x="226.0" y="108.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">3</text>
+<circle cx="594.0" cy="104.0" r="9" fill="#c92a2a"/>
+<text x="594.0" y="108.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">4</text>
+<circle cx="322.0" cy="186.0" r="9" fill="#c92a2a"/>
+<text x="322.0" y="190.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">5</text>
+<circle cx="500.0" cy="186.0" r="9" fill="#c92a2a"/>
+<text x="500.0" y="190.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">5</text>
+<circle cx="346.0" cy="262.0" r="9" fill="#c92a2a"/>
+<text x="346.0" y="266.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">6</text>
+<circle cx="688.0" cy="262.0" r="9" fill="#c92a2a"/>
+<text x="688.0" y="266.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">6</text>
+<text x="20.0" y="372.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">NIC watchdog: the NIC's micro-controller sees the receive pipeline stuck for 100 ms while pauses go out,</text>
+<text x="20.0" y="386.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">and stops the NIC from sending pauses. ToR watchdog: a server port that cannot drain and keeps getting pauses</text>
+<text x="20.0" y="400.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">is switched to lossy (its lossless packets are dropped) until 200 ms pass without pauses.</text>
+<text x="800.0" y="414.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal" font-style="italic">arrows point at the device being paused</text>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 410" width="820" height="410" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e03131" stroke-width="1.4"/></pattern><pattern id="hatch-orange" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff4e6"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e8590c" stroke-width="1.4"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="arr-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#212529"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c92a2a"/></marker><marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker><marker id="arr-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7048e8"/></marker><marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker><marker id="arr-faint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker></defs>
+<rect width="820" height="410" fill="#ffffff"/>
+<text x="20.0" y="24.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">Microsoft's data center network in 2016: a three-tier Clos</text>
+<rect x="150.0" y="134.0" width="210.0" height="234.0" rx="10" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="160.0" y="360.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">Podset</text>
+<rect x="430.0" y="134.0" width="210.0" height="234.0" rx="10" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="440.0" y="360.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#868e96" font-weight="normal">Podset</text>
+<line x1="205.0" y1="146.0" x2="260.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="146.0" x2="350.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="146.0" x2="440.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="146.0" x2="530.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="174.0" x2="205.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="174.0" x2="305.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="146.0" x2="260.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="146.0" x2="350.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="146.0" x2="440.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="146.0" x2="530.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="174.0" x2="205.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="174.0" x2="305.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="264.0" x2="179.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="264.0" x2="205.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="205.0" y1="264.0" x2="231.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="264.0" x2="279.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="264.0" x2="305.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="305.0" y1="264.0" x2="331.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="146.0" x2="260.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="146.0" x2="350.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="146.0" x2="440.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="146.0" x2="530.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="174.0" x2="485.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="174.0" x2="585.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="146.0" x2="260.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="146.0" x2="350.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="146.0" x2="440.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="146.0" x2="530.0" y2="84.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="174.0" x2="485.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="174.0" x2="585.0" y2="236.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="264.0" x2="459.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="264.0" x2="485.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="485.0" y1="264.0" x2="511.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="264.0" x2="559.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="264.0" x2="585.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<line x1="585.0" y1="264.0" x2="611.0" y2="318.0" stroke="#adb5bd" stroke-width="1"/>
+<rect x="225.0" y="56.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="260.0" y="74.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Spine</text>
+<rect x="315.0" y="56.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="350.0" y="74.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Spine</text>
+<rect x="405.0" y="56.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="440.0" y="74.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Spine</text>
+<rect x="495.0" y="56.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="530.0" y="74.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Spine</text>
+<rect x="170.0" y="146.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="205.0" y="164.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="270.0" y="146.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="305.0" y="164.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="170.0" y="236.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="205.0" y="254.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="171.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="197.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="223.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="270.0" y="236.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="305.0" y="254.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="271.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="297.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="323.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="450.0" y="146.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="485.0" y="164.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="550.0" y="146.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="585.0" y="164.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">Leaf</text>
+<rect x="450.0" y="236.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="485.0" y="254.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="451.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="477.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="503.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="550.0" y="236.0" width="70.0" height="28.0" rx="6" fill="#d0ebff" stroke="#1971c2" stroke-width="1.5"/>
+<text x="585.0" y="254.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">ToR</text>
+<rect x="551.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="577.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<rect x="603.0" y="318.0" width="16.0" height="20.0" rx="2" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<text x="20.0" y="70.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Spine (T2)</text>
+<text x="20.0" y="86.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">tens to hundreds</text>
+<text x="20.0" y="160.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Leaf (T1)</text>
+<text x="20.0" y="250.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">ToR (T0)</text>
+<text x="20.0" y="266.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">20 to 40 servers each</text>
+<text x="20.0" y="330.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#212529" font-weight="bold">Servers</text>
+<text x="20.0" y="346.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">40 GbE NICs</text>
+<line x1="652.0" y1="86.0" x2="652.0" y2="144.0" stroke="#495057" stroke-width="1.2"/>
+<line x1="647.0" y1="86.0" x2="657.0" y2="86.0" stroke="#495057" stroke-width="1.2"/>
+<line x1="647.0" y1="144.0" x2="657.0" y2="144.0" stroke="#495057" stroke-width="1.2"/>
+<text x="664.0" y="113.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">200 to 300 m of fiber</text>
+<text x="664.0" y="128.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">≈15 KB in flight per round trip</text>
+<line x1="652.0" y1="176.0" x2="652.0" y2="234.0" stroke="#495057" stroke-width="1.2"/>
+<line x1="647.0" y1="176.0" x2="657.0" y2="176.0" stroke="#495057" stroke-width="1.2"/>
+<line x1="647.0" y1="234.0" x2="657.0" y2="234.0" stroke="#495057" stroke-width="1.2"/>
+<text x="664.0" y="203.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">10 to 20 m</text>
+<text x="664.0" y="218.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">≈1 KB in flight</text>
+<line x1="652.0" y1="266.0" x2="652.0" y2="316.0" stroke="#495057" stroke-width="1.2"/>
+<line x1="647.0" y1="266.0" x2="657.0" y2="266.0" stroke="#495057" stroke-width="1.2"/>
+<line x1="647.0" y1="316.0" x2="657.0" y2="316.0" stroke="#495057" stroke-width="1.2"/>
+<text x="664.0" y="289.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">≈2 m of copper</text>
+<text x="664.0" y="304.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">≈100 B in flight</text>
+<text x="20.0" y="392.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">All links 40 GbE; every switch routes at layer 3 (ECMP across the parallel paths). RDMA runs among servers under the same Spine layer.</text>
+</svg>
