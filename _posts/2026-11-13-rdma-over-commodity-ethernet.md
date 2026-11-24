@@ -407,7 +407,7 @@ Open problems, from its Section 8.1:
 
 The paper's last question, whether RDMA needs a lossless network at all, became a research and industry program:
 
-- **IRN** ([SIGCOMM'18](https://dl.acm.org/doi/10.1145/3230543.3230557)): selective retransmission, plus a cap of one bandwidth-delay product in flight, makes RoCE work well without PFC ([my notes](/blogs/os/rocev2.html#2018-irn-mellanox-uc-berkeley)).
+- **IRN** ([SIGCOMM'18](https://dl.acm.org/doi/10.1145/3230543.3230557)): selective retransmission, plus a cap of one bandwidth-delay product in flight, makes RoCE work well without PFC ([my notes](/blogs/revisiting-network-support-for-rdma.html)).
 - **AWS SRD** ([IEEE Micro, 2020](https://ieeexplore.ieee.org/document/9167399)) sprays each flow's packets across many paths, delivers them out of order, and recovers losses itself, on AWS's own NICs.
 - **Google Falcon** ([SIGCOMM'25](https://dl.acm.org/doi/10.1145/3718958.3754353)) and **ByteDance's veRoCE** both accept out-of-order delivery and lossy networks ([my notes](/blogs/os/rocev2.html#2025)).
 - **Ultra Ethernet** 1.0 (June 2025) specifies a transport with packet spraying, out-of-order delivery and selective retransmission, designed to run without PFC.

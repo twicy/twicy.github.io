@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fff5f5"/><line x1="0" y1="0" x2="0" y2="6" stroke="#e03131" stroke-width="1.4"/></pattern><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#495057"/></marker><marker id="arr-dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#212529"/></marker><marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c92a2a"/></marker><marker id="arr-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1971c2"/></marker><marker id="arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f9e44"/></marker><marker id="arr-faint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker></defs>
+<rect width="820" height="440" fill="#ffffff"/>
+<text x="20.0" y="24.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">Three ways to put RDMA's transport in the NIC</text>
+<text x="150.0" y="56.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">iWARP</text>
+<text x="150.0" y="73.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">RDMA over a full TCP/IP stack</text>
+<rect x="40.0" y="86.0" width="220.0" height="28.0" rx="4" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<text x="150.0" y="104.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">verbs API (host software)</text>
+<rect x="32.0" y="122.0" width="236.0" height="194.0" rx="8" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="262.0" y="312.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">in the NIC</text>
+<text x="410.0" y="56.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">RoCEv2</text>
+<text x="410.0" y="73.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">InfiniBand's transport over UDP/IP</text>
+<rect x="300.0" y="86.0" width="220.0" height="28.0" rx="4" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<text x="410.0" y="104.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">verbs API (host software)</text>
+<rect x="292.0" y="122.0" width="236.0" height="194.0" rx="8" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="522.0" y="312.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">in the NIC</text>
+<text x="670.0" y="56.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#212529" font-weight="bold">IRN</text>
+<text x="670.0" y="73.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">RoCEv2 plus better loss handling</text>
+<rect x="560.0" y="86.0" width="220.0" height="28.0" rx="4" fill="#f1f3f5" stroke="#868e96" stroke-width="1.2"/>
+<text x="670.0" y="104.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">verbs API (host software)</text>
+<rect x="552.0" y="122.0" width="236.0" height="194.0" rx="8" fill="#ffffff" stroke="#adb5bd" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="782.0" y="312.0" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#868e96" font-weight="normal">in the NIC</text>
+<rect x="40.0" y="130.0" width="220.0" height="30.0" rx="4" fill="#fff4e6" stroke="#e8590c" stroke-width="1.3"/>
+<text x="150.0" y="143.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">RDMAP</text>
+<text x="150.0" y="157.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">Read, Write and Send operations</text>
+<rect x="40.0" y="164.0" width="220.0" height="30.0" rx="4" fill="#fff4e6" stroke="#e8590c" stroke-width="1.3"/>
+<text x="150.0" y="177.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">DDP</text>
+<text x="150.0" y="191.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">places segments directly in memory</text>
+<rect x="40.0" y="198.0" width="220.0" height="30.0" rx="4" fill="#fff4e6" stroke="#e8590c" stroke-width="1.3"/>
+<text x="150.0" y="211.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">MPA</text>
+<text x="150.0" y="225.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">frames segments in a byte stream</text>
+<rect x="40.0" y="232.0" width="220.0" height="30.0" rx="4" fill="#fff4e6" stroke="#e8590c" stroke-width="1.3"/>
+<text x="150.0" y="245.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">TCP</text>
+<text x="150.0" y="259.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">byte stream, congestion window, resends</text>
+<rect x="40.0" y="266.0" width="220.0" height="30.0" rx="4" fill="#ffffff" stroke="#868e96" stroke-width="1.3"/>
+<text x="150.0" y="285.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">IP</text>
+<rect x="300.0" y="130.0" width="220.0" height="98.0" rx="4" fill="#d0ebff" stroke="#1971c2" stroke-width="1.3"/>
+<text x="410.0" y="170.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">InfiniBand transport</text>
+<text x="410.0" y="185.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">BTH header: opcode, QP number, PSN</text>
+<text x="410.0" y="198.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">go-back-N; receiver drops out-of-order</text>
+<rect x="560.0" y="130.0" width="220.0" height="98.0" rx="4" fill="#d0ebff" stroke="#1971c2" stroke-width="1.3"/>
+<text x="670.0" y="150.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">InfiniBand transport + IRN</text>
+<text x="570.0" y="170.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2f9e44" font-weight="bold">+ selective retransmission (SACK bitmap)</text>
+<text x="570.0" y="184.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2f9e44" font-weight="bold">+ BDP-FC: at most one BDP in flight</text>
+<text x="570.0" y="199.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2f9e44" font-weight="bold">+ out-of-order placement in memory</text>
+<text x="570.0" y="213.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2f9e44" font-weight="bold">+ Read (N)ACKs and a few header fields</text>
+<rect x="300.0" y="232.0" width="220.0" height="30.0" rx="4" fill="#ffffff" stroke="#868e96" stroke-width="1.3"/>
+<text x="410.0" y="245.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">UDP</text>
+<text x="410.0" y="259.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">destination port 4791</text>
+<rect x="300.0" y="266.0" width="220.0" height="30.0" rx="4" fill="#ffffff" stroke="#868e96" stroke-width="1.3"/>
+<text x="410.0" y="285.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">IP</text>
+<rect x="560.0" y="232.0" width="220.0" height="30.0" rx="4" fill="#ffffff" stroke="#868e96" stroke-width="1.3"/>
+<text x="670.0" y="245.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">UDP</text>
+<text x="670.0" y="259.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">destination port 4791</text>
+<rect x="560.0" y="266.0" width="220.0" height="30.0" rx="4" fill="#ffffff" stroke="#868e96" stroke-width="1.3"/>
+<text x="670.0" y="285.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">IP</text>
+<rect x="40.0" y="328.0" width="220.0" height="40.0" rx="4" fill="#ebfbee" stroke="#2f9e44" stroke-width="1.3"/>
+<text x="150.0" y="345.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">any IP network</text>
+<text x="150.0" y="360.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">loss is handled in the NIC</text>
+<line x1="150.0" y1="316.0" x2="150.0" y2="328.0" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="300.0" y="328.0" width="220.0" height="40.0" rx="4" fill="#fff5f5" stroke="#c92a2a" stroke-width="1.3"/>
+<text x="410.0" y="345.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">lossless Ethernet</text>
+<text x="410.0" y="360.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">PFC on every link</text>
+<line x1="410.0" y1="316.0" x2="410.0" y2="328.0" stroke="#adb5bd" stroke-width="1.2"/>
+<rect x="560.0" y="328.0" width="220.0" height="40.0" rx="4" fill="#ebfbee" stroke="#2f9e44" stroke-width="1.3"/>
+<text x="670.0" y="345.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#212529" font-weight="bold">any IP network</text>
+<text x="670.0" y="360.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#495057" font-weight="normal">PFC optional; works best off</text>
+<line x1="670.0" y1="316.0" x2="670.0" y2="328.0" stroke="#adb5bd" stroke-width="1.2"/>
+<text x="150.0" y="390.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">Chelsio T580-CR, $760</text>
+<text x="150.0" y="405.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">3.24 Mpps, 2.89 µs</text>
+<text x="410.0" y="390.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">Mellanox MCX416A, $420</text>
+<text x="410.0" y="405.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">14.7 Mpps, 0.94 µs</text>
+<text x="670.0" y="390.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="normal">simulated, logic synthesized on FPGA</text>
+<text x="670.0" y="405.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#212529" font-weight="bold">+3-10% NIC state, ≥ 45 Mpps</text>
+<text x="20.0" y="430.0" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#495057" font-weight="normal">NIC numbers: 64-byte RDMA Writes on one queue pair at 40 Gb/s (the paper's Table 1). IRN's: its FPGA synthesis and state estimate (section 6).</text>
+</svg>
